@@ -42,11 +42,11 @@ This project's development was an iterative process that culminated in a refined
 
 * **SciPy & Scikit-learn:** For statistical analysis and clustering techniques (like MDS).
 
-* **Streamlit:** Used to build the interactive web application and dashboards.
-
 * **Matplotlib & Plotly:** For generating visualizations like the correlation matrix, radial charts, and time series.
 
 * **GeoPandas:** For handling geospatial data and map visualizations.
+
+* **D3.js:** For handling graphics like charts, map visualizations, and others
 
 ## Repository Structure
 
@@ -93,5 +93,5 @@ Run the dashboard in VSC:
 
 ## Read the Full Paper
 For a detailed explanation of the methodology, model, results, and case studies, you can read the full paper
-Multifactor visual analysis of the spread of epidemiological diseases and their relationship with sociodemographic factors.pdf
+Multifactor visual analysis of the spread of epidemiological diseases and their relationship with sociodemographic factors.pdf at https://github.com/J0hn-SC/multifactor-visual-analysis-epidemics/blob/main/Multifactor%20visual%20analysis%20of%20the%20spread%20of%20epidemiological%20diseases%20and%20their%20relationship%20with%20sociodemographic%20factors.pdf 
 
