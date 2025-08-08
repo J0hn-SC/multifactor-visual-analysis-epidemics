@@ -51,30 +51,39 @@ This project's development was an iterative process that culminated in a refined
 ## Repository Structure
 
 ```
-├── data/
-│   ├── covid_cases.csv
-│   ├── sociodemographic_data.csv
-│   └── geojson_data.geojson
-├── notebooks/
-│   └── exploratory_data_analysis.ipynb
+├── dashboard_data/ (data after preprocessing)
+│   ├── common (common parts of different dashboards)
+│   │   └── census_clean.csv
+│   │   └── covid_clean.csv
+│   ├── bar_chart
+│   │   └── lga_data_clean.csv
+│   ├── ...
+├── dashboard_parts/ (different parts of the dashboards)
+│   └── context.map.html
+│   └── ...
 ├── dashboards/
-│   └── final_dashboard.py
-├── paper/
-│   └── paper_tcd.pdf
-├── requirements.txt
+│   └── dashboard1.html
+│   └── dashboard2.html
+│   └── dashboard3.html
+│   └── dashboard4.html (final dashboard)
+├── original_data/
+│   └── 20200221-Upate-LGA-NSW.csv
+│   └── cases_NSW.csv
+│   └── nsw_lga_polygon_V5.geojson
+├── index.html.txt
 └── README.md
 
 ```
 
 ### How to see Demo
 
-You can go to [url]
+You can go to https://j0hn-sc.github.io/multifactor-visual-analysis-epidemics/
 
 ### How to Run the Project Locally
 
 Clone the repository:
 ```
-git clone [repository_url]
+git clone https://github.com/J0hn-SC/multifactor-visual-analysis-epidemics.git
 ```
 
 Run the dashboard in VSC:
@@ -84,4 +93,5 @@ Run the dashboard in VSC:
 
 ## Read the Full Paper
 For a detailed explanation of the methodology, model, results, and case studies, you can read the full paper
+Multifactor visual analysis of the spread of epidemiological diseases and their relationship with sociodemographic factors.pdf
 
