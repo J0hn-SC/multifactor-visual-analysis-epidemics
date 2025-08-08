@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagation Analyser</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <style>
+
+body {
+    font-family: sans-serif;
+    margin: 4px 4px;
+    background-color: #f9f9f9;
+}
+
+.dashboard {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: auto auto auto;
+}
+
+.row-1 {
+  display: grid;
+  grid-template-columns: 1fr; /* dos columnas iguales */
+}
+
+.row-2 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns:
+    calc(17% - 7px)
+    calc(33% - 7px)
+    calc(50% - 6px);
+}
+
+.row-3 {
+  display: grid;
+  grid-template-columns: 1fr; /* una columna */
+}
+
+
+
+.title {
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.flex{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+
+.contour {
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.text-center{
+  display: flex;
+  justify-content: center;
+}
+
+.config-parameter{
+  display: grid;
+  grid-template-columns: 45% 52%;
+  gap:14px;
+  margin-top: 1rem;
+}
+
+.v-select{
+  background-color: aliceblue;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/*--------------------------Estilos para la serie temporal----------------------------------*/
+.line {
+    fill: none;
+    stroke-width: 1.5px;
+}
+.mean {
+    stroke-width: 2.5px;
+}
+.hidden {
+    display: none;
+}
+.axis path,
+.axis line {
+    stroke: #ccc;
+}
+
+.x-axis path,
+.x-axis line,
+.y-axis path,
+.y-axis line {
+  stroke: #333;
+  stroke-width: 2px;
+}
+
+/*-----------------Estilos barra de tiempo en serie temporal----------------*/
+
+.slider-indicator {
+  fill: #f44336; /* rojo estilo Vuetify */
+  stroke: white;
+  stroke-width: 2px;
+  cursor: pointer;
+  transition: fill 0.2s ease, r 0.2s ease, stroke-width 0.2s ease;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+}
+
+.slider-indicator:hover {
+  fill: #e53935;
+  r: 10;
+  stroke-width: 3px;
+}
+
+/*----------------------Estilos de la barra de tiempo------------------------------------------*/
+
+.slider-container {
+    max-width: 90%;
+    width: 90%;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 40px 0 50px 0;
+}
+
+.slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #ccc;
+    outline: none;
+    border-radius: 3px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #1976d2;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #1976d2;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.ticks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    position: relative;
+}
+
+.tick {
+    height: 10px;
+    width: 2px;
+    background-color: #888;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.label {
+    color: rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+    text-align: center;
+    flex: 1;
+}
+
+.label.active {
+    color: #1976d2;
+    font-weight: bold;
+}
+
+.checkbox {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/*-----------------Grafico Radial-------------------------*/
+.axis {
+  stroke: green;
+  stroke-width: 1px;
+}
+.line {
+  fill: none;
+  stroke-width: 3px;
+  opacity: 0.3;
+  transition: all 0.2s;
+}
+.line-main {
+  opacity: 0.6;
+}
+.highlight {
+  opacity: 1 !important;
+  stroke-width: 3px !important;
+}
+/*----------------------Leyendas---------------------------------*/
+.legend rect {
+  stroke: none;
+}
+.legend-highlight text {
+  font-weight: bold;
+}
+.tick-label {
+  font-size: 10px;
+  fill: #333;
+}
+
+    </style>
+</head>
+<body class="dashboard">
+    
+    <!-- Titulo -->
+    <div class="row-1">
+      <div class="title">
+        Propagation Analyser - Visual Analysis of Disease Propagation :  Applied to Covid-19 Cases in New South Wales
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="contour">
+        <div>
+          Control Panel
+        </div>
+        <hr>
+        <div class="" style="margin-top: 1.5rem; font-weight: 800;">
+          Dataset Information
+        </div>
+
+        <div class="config-parameter">
+          <div>
+            Dataset of Cases 
+          </div>
+          <select name="select" class="v-select">
+            <option value="value1">NSW Covid-19</option>
+          </select>
+        </div>
+
+        <div class="config-parameter">
+          <div>
+            Sociodemographic Data
+          </div>
+          <select name="select" class="v-select">
+            <option value="value1">NSW Sociodemographic Data</option>
+          </select>
+        </div>
+
+        <div class="config-parameter">
+          <div>
+            Geojson data
+          </div>
+          <select name="select" class="v-select">
+            <option value="value1">NSW Geojson Data</option>
+          </select>
+        </div>
+
+        <div class="config-parameter">
+          <div>
+            Unit - Based
+          </div>
+          <div>
+            <div style="margin: 8px 0px;">
+              <input type="radio" id="lga" name="unit-based" value="lga" checked />
+              <label for="lga">LGA</label>
+            </div>
+
+            <div style="margin: 8px 0px;">
+              <input type="radio" id="postal-zones" name="unit-based" value="postal-zones" disabled/>
+              <label for="postal-zones" style="opacity: 0.5;">Postal Zones</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="config-parameter">
+          <div>
+            Columns
+          </div>
+          <div>
+            <div style="margin: 8px 0px;">
+              <input type="radio" id="all" name="columns" value="all" checked />
+              <label for="all">All</label>
+            </div>
+
+            <div style="margin: 8px 0px;">
+              <input type="radio" id="optimized" name="columns" value="optimized" disabled/>
+              <label for="optimized" style="opacity: 0.5;">Optimized</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="" style="margin-top: 1.5rem; font-weight: 800;">
+          Color Palette
+        </div>
+
+        <div class="config-parameter">
+          <div>
+            Mode
+          </div>
+          <div>
+            <div style="margin: 8px 0px;">
+              <input type="radio" id="light" name="mode" value="light" checked />
+              <label for="light">Light</label>
+            </div>
+
+            <div style="margin: 8px 0px;">
+              <input type="radio" id="dark" name="mode" value="dark" disabled/>
+              <label for="dark" style="opacity: 0.5;">Dark</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="" style="margin-top: 1.5rem; font-weight: 800;">
+          Configuration
+        </div>
+
+        <div class="config-parameter">
+          <div>
+            Time
+          </div>
+          <div>
+            <div>
+              <input type="checkbox" id="autoplay" checked />
+              <label for="autoplay">Automatic Time</label>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+
+      <!------------ Mapa de Propagacio de casos --------------->
+
+      <div  class="contour">
+        <div>
+          Map of the Spread of Confirmed Cases
+        </div>
+        <hr>
+        <!----------------- Mapa de casos ------------------>
+        <svg id="svgMap" width="600" height="500"  style="width: 100%;"></svg>
+      </div>
+      <div class="contour" >
+        <div>Radar Cluster Charts</div>
+        <hr>
+        <div  style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 10px;">
+          <div>
+            <div class="text-center">Cluster 1</div>
+            <svg id="chart-radial-1" width="500" height="240"></svg>
+          </div>
+          <div>
+            <div class="text-center">Cluster 2</div>
+            <svg id="chart-radial-2" width="500" height="240"></svg>
+          </div>
+          <div>
+            <svg id="chart-radial-3" width="500" height="240"></svg>
+          </div>
+          <div>
+            <svg id="chart-radial-4" width="500" height="240"></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Serie temporal -->
+    <div class="row-3">
+      <div class="contour ">
+        <div>
+          Time series of average cases per cluster
+        </div>
+        <hr>
+        <div class="flex">
+          <svg id="temporal-serie" width="2000" height="300"></svg>
+          <div width="200" class="contour" style="border: #333 2px solid; border-radius: 5px; min-width: 10rem;">
+          Summary of Cases
+          <hr>
+          <div class="config-parameter">
+            <div style="font-weight: 700;">Total:</div>
+            <div id="stat-total">0.000</div>
+          </div>
+          <div class="config-parameter">
+            <div style="font-weight: 700;">Max:</div>
+            <div id="stat-max">0.000</div>
+          </div>
+          <div class="config-parameter">
+            <div style="font-weight: 700;">Min:</div>
+            <div id="stat-min">0.000</div>
+          </div>
+          <div class="config-parameter">
+            <div style="font-weight: 700;">Media:</div>
+            <div id="stat-mean">0.000</div>
+          </div>
+          <div class="config-parameter">
+            <div style="font-weight: 700;">Mediana:</div>
+            <div id="stat-median">0.000</div>
+          </div>
+        </div>
+        </div>
+      </div> 
+    </div>
+
+<script>
+
+    //GLOBALES
+
+    const monthNames = [
+      "Ene 2020", "Feb 2020", "Mar 2020", "Abr 2020", "May 2020", "Jun 2020",
+      "Jul 2020", "Ago 2020", "Sept 2020", "Oct 2020", "Nov 2020", "Dic 2020",
+      "Ene 2021", "Feb 2021", "Mar 2021", "Abr 2021", "May 2021", "Jun 2021",
+      "Jul 2021", "Ago 2021", "Sept 2021", "Oct 2021", "Nov 2021", "Dic 2021"
+    ];
+
+    d3.timeFormatDefaultLocale({
+      "dateTime": "%A, %e de %B de %Y, %X",
+      "date": "%d/%m/%Y",
+      "time": "%H:%M:%S",
+      "periods": ["AM", "PM"],
+      "days": ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"],
+      "shortDays": ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"],
+      "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio",
+                "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
+      "shortMonths": ["Ene", "Feb", "Mar", "Abr", "May", "Jun",
+                      "Jul", "Ago", "Sept", "Oct", "Nov", "Dic"]
+    });
+
+    const parseDate = d3.timeParse("%b %Y");
+    const monthSteps = monthNames.map(m => parseDate(m));
+
+
+        // --------------------- Barra de tiempo -------------------------------- //
+
+    const slider = document.getElementById('mesSlider');
+    const autoCheckbox = document.getElementById('modoAuto');
+    const labelsContainer = document.getElementById('labels');
+    const ticksContainer = document.getElementById('ticks');
+
+    let intervalo;
+    let enModoAuto = true;
+
+    // --------------------Fin Barra de Tiempo ---------------------------/
+
+    //----------------------  Serie Temporal ---------------------------------------------------
+
+
+
+    const svg = d3.select("#temporal-serie"),
+          margin = {top: 30, right: 80, bottom: 40, left: 50},
+          width = +svg.attr("width") - margin.left - margin.right,
+          height = +svg.attr("height") - margin.top - margin.bottom;
+
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+
+    Promise.all([
+        // d3.csv("./cluster_timeseries_1year.csv"),
+        d3.csv("../dashboard_data/cluster_time_series/cluster_timeseries_675days.csv"),
+        d3.csv("../dashboard_data/cluster_time_series/monthly_cluster_stats_fixed.csv"),
+        d3.csv("../dashboard_data/cluster_time_series/monthly_global_stats_fixed.csv"),
+        d3.json("../dashboard_data/cluster_time_series/lga_clusters.json"),
+        d3.json("../original_data/nsw_lga_polygon_V5.geojson"),
+        d3.csv("../dashboard_data/map_of_cases_by_lga/covid_monthly_summary_filled.csv", d => ({
+            lga_code: d.lga_code19,
+            month: d.year_month,
+            cases: +d.CumulativeCases
+        }))
+    ]).then(([data, monthly_cluster, monthly_global, lga_clusters, geojson, csvData]) => {
+
+    // })
+    // d3.csv("cluster_timeseries_1year.csv").then(data => {
+
+      // Parse date and values
+      data.forEach(d => {
+        d.date = new Date(d.date);
+        d.value = +d.value;
+        d.cluster = +d.cluster;
+      });
+
+      // const x = d3.scaleTime()
+      //             .domain(d3.extent(data, d => d.date))
+      //             .range([0, width]);
+      const x = d3.scaleTime()
+                  .domain(d3.extent(monthSteps))
+                  .range([0, width]);
+
+      const y = d3.scaleLinear()
+                  .domain([-2, d3.max(data, d => d.value)])
+                  .range([height, 0]);
+
+      const color = d3.scaleOrdinal()
+                      .domain([1,2,3,4,5,6,7])
+                      .range(['purple', 'blue', 'green', 'orange', 'skyblue', 'yellow', 'pink']);
+
+
+      g.append("g")
+        .attr("class", "x-axis")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x)
+        // .ticks(monthSteps.length)
+        .tickValues(monthSteps)
+        .tickFormat(d3.timeFormat("%b %Y"))
+      );
+
+      g.append("g")
+        .attr("class", "y-axis")
+        .call(d3.axisLeft(y));
+
+      const indicador = g.append("circle")
+      .attr("class", "slider-indicator")
+      .attr("r", 9)
+      .attr("cy", height + 5)
+      .attr("cx", x(monthSteps[0]))
+      .attr("fill", "red");
+
+
+      let isPlaying = true;
+      let currentIndex = 0;
+
+      const checkbox = d3.select("#autoplay"); // tu checkbox
+
+      checkbox.on("change", function() {
+        isPlaying = this.checked;
+      });
+
+      d3.interval(() => {
+        if (!isPlaying) return;
+
+        currentIndex = (currentIndex + 1) % monthSteps.length;
+        updateMap(currentIndex)
+        updateStats(currentIndex)
+        indicador
+          .transition()
+          .duration(500)
+          .attr("cx", x(monthSteps[currentIndex]));
+      }, 1000);
+
+
+      const drag = d3.drag()
+      .on("start", () => {
+        isPlaying = false;
+        checkbox.property("checked", false);
+      })
+      .on("drag", (event) => {
+        let mouseX = event.x;
+
+        // Buscar el tick más cercano a la posición del mouse
+        let closestDate = monthSteps.reduce((a, b) => {
+          return Math.abs(x(b) - mouseX) < Math.abs(x(a) - mouseX) ? b : a;
+        });
+
+        currentIndex = monthSteps.indexOf(closestDate);
+        updateMap(currentIndex)
+
+        indicador.attr("cx", x(closestDate));
+      });
+
+    indicador.call(drag);
+
+      // Agrupar por cluster y tipo
+      const nested = d3.groups(data, d => d.cluster, d => d.type);
+
+      const line = d3.line()
+                     .x(d => x(d.date))
+                     .y(d => y(d.value));
+
+      const clusterGroups = g.selectAll(".cluster")
+        .data(nested)
+        .join("g")
+        .attr("class", d => `cluster cluster-${d.clusterId}`)
+        .attr("data-cluster", d => d[0]);
+
+      clusterGroups.each(function(clusterData) {
+        const clusterId = clusterData[0];
+        const types = Object.fromEntries(clusterData[1]);
+
+        // Individual gray lines
+        const individualLines = d3.groups(types.individual, d => d.series_id);
+        d3.select(this).selectAll(".line.individual")
+          .data(individualLines)
+          .join("path")
+          .attr("class", "line individual hidden")
+          .attr("d", d => line(d[1]))
+          .attr("stroke", "lightgray");
+
+        // Mean line
+        d3.select(this).append("path")
+          .datum(types.mean)
+          .attr("class", "line mean")
+          .attr("stroke", color(clusterId))
+          .attr("d", line)
+          .on("mouseover", function() {
+            d3.select(this.parentNode).selectAll(".individual").classed("hidden", false);
+          })
+          .on("mouseout", function() {
+            d3.select(this.parentNode).selectAll(".individual").classed("hidden", true);
+          });
+      });
+
+
+      /*-------Leyenda para Serie temporal-----------*/
+      const legendSerie = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", "translate(1800, 50)");
+      
+      let serie_legend = [
+        { name: "Cluster 1", color: "purple" },
+        { name: "Cluster 2", color: "blue" },
+        { name: "Cluster 3", color: "green" },
+        { name: "Cluster 4", color: "orange" },
+        { name: "Other", color: "gray" },
+        // { name: "Grupo Principal", color: "green" },
+      ]
+
+      serie_legend.forEach((entry, idx) => {
+        const item = legendSerie.append("g")
+          .attr("transform", `translate(0, ${idx * 20})`)
+          .attr("id", `legend-${idx}`);
+
+        item.append("rect")
+          .attr("width", 12)
+          .attr("height", 12)
+          .attr("fill", entry.color);
+
+        item.append("text")
+          .attr("x", 18)
+          .attr("y", 10)
+          .text(entry.name);
+      });
+
+    // });
+
+
+
+
+    //---------------------------------- Mapa de casos -----------------------------------------------
+    const svgMap = d3.select("#svgMap");
+    const widthMap = +svgMap.attr("width");
+    const heightMap = +svgMap.attr("height");
+    const projection = d3.geoMercator();
+    const path = d3.geoPath().projection(projection);
+    
+    //-------------- Leyenda para Mapa ------------------------
+    const legendMap = svgMap.append("g")
+      .attr("class", "legend")
+      .attr("transform", "translate(500, 350)");
+    
+    let cluster_legend = [
+      { name: "Casos Confirmado (1 de 10)", color: "red" },
+      { name: "Cluster 1", color: "purple" },
+      { name: "Cluster 2", color: "blue" },
+      { name: "Cluster 3", color: "green" },
+      { name: "Cluster 4", color: "orange" },
+      { name: "Cluster 5", color: "gray" },
+      // { name: "Grupo Principal", color: "green" },
+    ]
+
+    cluster_legend.forEach((entry, idx) => {
+      const item = legendMap.append("g")
+        .attr("transform", `translate(0, ${idx * 20})`)
+        .attr("id", `legend-${idx}`);
+
+      item.append("rect")
+        .attr("width", 12)
+        .attr("height", 12)
+        .attr("fill", entry.color);
+
+      item.append("text")
+        .attr("x", 18)
+        .attr("y", 10)
+        .text(entry.name);
+    });
+
+    /*----Leyenda de gravedad de casos para mapa*/
+    const legendGravityMap = svgMap.append("g")
+      .attr("class", "legend")
+      .attr("transform", "translate(550, 250)");
+    
+    let gravity_legend = [
+      { name: "Zona de emergencia", color: "🚨" },
+      { name: "Zona de alerta", color: "⚠️" },
+      { name: "Brote de casos", color: "🦠" },
+      // { name: "Grupo Principal", color: "green" },
+    ]
+
+    gravity_legend.forEach((entry, idx) => {
+      const item = legendGravityMap.append("g")
+        .attr("transform", `translate(0, ${idx * 20})`)
+        .attr("id", `legend-${idx}`);
+
+      item.append("text")
+        .attr("x", -5)
+        .attr("y", 10)
+        .text(entry.color);
+
+      item.append("text")
+        .attr("x", 18)
+        .attr("y", 10)
+        .text(entry.name);
+    });
+
+
+
+      const casesPerLGA = {};
+      csvData.forEach(d => {
+        if (!casesPerLGA[d.lga_code]) casesPerLGA[d.lga_code] = {};
+        casesPerLGA[d.lga_code][d.month] = d.cases;
+      });
+
+      // Lista ordenada de fechas únicas
+      const months = Array.from(new Set(csvData.map(d => d.month))).sort();
+
+      projection.fitSize([widthMap, heightMap], geojson);
+      svgMap.selectAll("path")
+        .data(geojson.features)
+        .enter()
+        .append("path")
+        .attr("d", path)
+        // .attr("fill", "#eee")
+        .attr("fill", d => {
+            const val = lga_clusters[d.properties.lgacode];
+            return val != null ? color(val) : "#ccc"; // gris si no hay dato
+            })
+        .attr("stroke", "#333")
+        .attr("class", d => {
+            const cluster = lga_clusters[d.properties.lgacode];
+            return cluster != null ? `region cluster-${cluster}` : "region";
+        });
+
+      function generatePointsInPolygon(polygon, count) {
+        const points = [];
+        const bbox = turf.bbox(polygon);
+        let tries = 0;
+        while (points.length < count && tries < count * 10) {
+          const pt = turf.randomPoint(1, { bbox }).features[0];
+          if (turf.booleanPointInPolygon(pt, polygon)) {
+            points.push(pt);
+          }
+          tries++;
+        }
+        return points;
+      }
+
+      function updateMap(monthIndex) {
+        const currentMonth = months[monthIndex];
+        //monthLabel.textContent = monthNames[monthIndex];
+        svgMap.selectAll("circle").remove();
+
+        geojson.features.forEach(feature => {
+          // const code = feature.properties.LGA_CODE21;
+          const code = feature.properties.lgacode;
+          const cases = casesPerLGA[code]?.[currentMonth] || 0;
+
+          // Escalar los casos si hay demasiados (opcional: limitar visualización)
+          // const scaledCases = Math.min(Math.round(cases / 10), 500); // 1 punto = 10 casos
+          const scaledCases = Math.min(Math.round(cases / 4), 500);
+        //   const scaledCases = cases;
+          const points = generatePointsInPolygon(feature, scaledCases);
+          svgMap.selectAll(null)
+            .data(points)
+            .enter()
+            .append("circle")
+            .attr("cx", d => projection(d.geometry.coordinates)[0])
+            .attr("cy", d => projection(d.geometry.coordinates)[1])
+            .attr("r", 1.5)
+            .attr("fill", "red")
+            .attr("opacity", 0.7);
+
+
+          console.log("cases", cases)
+          if (cases > 100 || cases > 50 || cases > 0) {
+            const centroid = path.centroid(feature);
+            let icon = "";
+
+            if (cases > 100) icon = "🚨";     // Alerta total
+            else if (cases > 50) icon = "⚠️"; // Advertencia
+            else if (cases > 10) icon = "🦠"; // Brote
+            else icon = " "; // Brote
+
+            svgMap.append("text")
+              .attr("x", centroid[0])
+              .attr("y", centroid[1])
+              .attr("text-anchor", "middle")
+              .attr("font-size", "15px")
+              .attr("dy", "-0.5em")
+              .text(icon);
+          }
+
+          
+        });
+      }
+
+      function updateStats(currentIndex){
+        const stats = monthly_global[currentIndex];
+
+        if (!stats) {
+          console.warn("No hay datos para este índice:", currentIndex);
+          return;
+        }
+
+        document.getElementById("stat-total").textContent = parseFloat(stats.total).toFixed(3);
+        document.getElementById("stat-max").textContent = parseFloat(stats.max).toFixed(3);
+        document.getElementById("stat-min").textContent = parseFloat(stats.min).toFixed(3);
+        document.getElementById("stat-mean").textContent = parseFloat(stats.mean).toFixed(3);
+        document.getElementById("stat-median").textContent = parseFloat(stats.median).toFixed(3);
+      }
+
+      //----------------------Interacciones -----------------------
+      // Interacciones lineas -> mapa
+      g.selectAll(".line.mean")
+        .on("mouseover", function(event, d) {
+            console.log("mouseover d", d)
+            d3.select(this.parentNode).selectAll(".individual").classed("hidden", false);
+            const clusterId = d[0].cluster;
+            d3.selectAll(`.cluster-${clusterId}`).attr("stroke", "yellow").attr("stroke-width", 3);
+            d3.selectAll(`.cluster-${clusterId}`).attr("stroke", "yellow").attr("stroke-width", 3);
+
+        })
+        .on("mouseout", function(event, d) {
+            d3.select(this.parentNode).selectAll(".individual").classed("hidden", true);
+            const clusterId = d[0].cluster;
+            d3.selectAll(`.cluster-${clusterId}`).attr("stroke", "#333").attr("stroke-width", 1);
+        });
+
+    });
+
+    /*------------------------------- Graficos Radiales ------------------------------------*/
+
+    const widthRadial = 500;
+    const heightRadial = 250;
+    const radius = 100;
+    const center = { x: (widthRadial / 2) - 50, y: heightRadial / 2 + 20 };
+    
+    /*------------------------- Grafico Radial 1 --------------------------------*/
+    const attributes = ["LowIncome%", "MedianFamilyIncome", "MedianHouseholdIncome", "MedianPersonIncome", "Population_Density"];
+    const angleSlice = (2 * Math.PI) / attributes.length;
+    
+
+    // Dataset con valores reales
+    const data = [
+      { name: "Cluster 1 (Main)", values: { "LowIncome%": 0.4, MedianFamilyIncome: 1498.09, MedianHouseholdIncome: 1246.46, MedianPersonIncome: 601.94, Population_Density: 416.57 }, color: "purple" },
+      { name: "Cluster 2",   values: { "LowIncome%": 0.37, MedianFamilyIncome: 1781.67, MedianHouseholdIncome: 1453.93, MedianPersonIncome: 687.20, Population_Density: 1264.61 }, color: "blue" },
+      { name: "Cluster 3",   values: { "LowIncome%": 0.39, MedianFamilyIncome: 1524.26, MedianHouseholdIncome: 1249.74, MedianPersonIncome: 605.15, Population_Density: 404.13 }, color: "green" },
+      { name: "Cluster 4",   values: { "LowIncome%": 0.37, MedianFamilyIncome: 1754.28, MedianHouseholdIncome: 1417.61, MedianPersonIncome: 686.81, Population_Density: 688.24 }, color: "orange" }
+    ];
+
+    const getExtent = key => d3.extent(data, d => d.values[key]);
+
+    // Atributos con valores Z-score (ejes con escalas diferentes)
+    const scales = {
+      "LowIncome%": d3.scaleLinear().domain(getExtent("LowIncome%")).range([0, radius]),
+      "MedianFamilyIncome": d3.scaleLinear().domain(getExtent("MedianFamilyIncome")).range([0, radius]),
+      "MedianHouseholdIncome": d3.scaleLinear().domain(getExtent("MedianHouseholdIncome")).range([0, radius]),
+      "MedianPersonIncome": d3.scaleLinear().domain(getExtent("MedianPersonIncome")).range([0, radius]),
+      "Population_Density": d3.scaleLinear().domain(getExtent("Population_Density")).range([0, radius])
+    };
+
+    
+
+    const radial1 = d3.select("#chart-radial-1")
+      .attr("width", widthRadial)
+      .attr("height", heightRadial);
+
+    // Ejes y ticks por atributo
+    attributes.forEach((attr, i) => {
+      const angle = angleSlice * i - Math.PI / 2;
+      const scale = scales[attr];
+
+      // Línea del eje
+      const lineX = center.x + Math.cos(angle) * radius;
+      const lineY = center.y + Math.sin(angle) * radius;
+      radial1.append("line")
+        .attr("x1", center.x)
+        .attr("y1", center.y)
+        .attr("x2", lineX)
+        .attr("y2", lineY)
+        .attr("class", "axis");
+
+      // Etiqueta del atributo
+      const labelX = center.x + Math.cos(angle) * (radius + 20);
+      const labelY = center.y + Math.sin(angle) * (radius + 20);
+      radial1.append("text")
+        .attr("x", labelX)
+        .attr("y", labelY)
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "central")
+        .text(attr);
+
+      // Ticks con valores
+      const tickValues = scale.ticks(5);
+      tickValues.forEach(val => {
+        const dist = scale(val);
+        const x = center.x + Math.cos(angle) * dist;
+        const y = center.y + Math.sin(angle) * dist;
+
+        radial1.append("circle")
+          .attr("cx", x)
+          .attr("cy", y)
+          .attr("r", 2)
+          .attr("fill", "#888");
+
+        radial1.append("text")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("dy", "-0.4em")
+          .attr("text-anchor", "middle")
+          .attr("class", "tick-label")
+          .text(val.toFixed(1));
+      });
+    });
+
+    // Función para convertir valores a coordenadas polares
+    function getPathCoords(entry) {
+      return attributes.map((attr, i) => {
+        const angle = angleSlice * i - Math.PI / 2;
+        const r = scales[attr](entry.values[attr]);
+        return [
+          center.x + Math.cos(angle) * r,
+          center.y + Math.sin(angle) * r
+        ];
+      });
+    }
+
+    // Dibujar líneas
+    const line = d3.line().curve(d3.curveLinearClosed);
+
+    const group = radial1.append("g");
+    data.forEach((entry, idx) => {
+      const coords = getPathCoords(entry);
+
+      const path = group.append("path")
+        .attr("d", line(coords))
+        .attr("stroke", entry.color)
+        .attr("stroke-width", 30)
+        .attr("fill", entry.color)
+        .attr("class", entry.name === "Cluster 1 (Main)" ? "line line-main" : "line")
+        .attr("data-idx", idx)
+        .on("mouseover", function () {
+          d3.select(this).classed("highlight", true);
+          d3.select(`#legend-${idx}`).classed("legend-highlight", true);
+        })
+        .on("mouseout", function () {
+          d3.select(this).classed("highlight", false);
+          d3.select(`#legend-${idx}`).classed("legend-highlight", false);
+        });
+
+      if (entry.name !== "Cluster 1 (Main)") {
+        // Línea en gris por defecto
+        //path.attr("stroke", "gray");
+        //path.attr("stroke", "gray");
+      }
+    });
+
+    // Leyenda con colores reales
+    const legend = radial1.append("g")
+      .attr("class", "legend")
+      .attr("transform", "translate(310, 130)");
+
+    data.forEach((entry, idx) => {
+      const item = legend.append("g")
+        .attr("transform", `translate(0, ${idx * 20})`)
+        .attr("id", `legend-${idx}`);
+
+      item.append("rect")
+        .attr("width", 12)
+        .attr("height", 12)
+        .attr("fill", entry.color);
+
+      item.append("text")
+        .attr("x", 18)
+        .attr("y", 10)
+        .text(entry.name);
+    });
+
+
+    /*------------------------- Grafico Radial 2 --------------------------------*/
+
+    const attributesRadial2 = ["Persons_per_Bedroom", "Population_Density", "MedianFamilyIncome", "PercentofPublicTransportation", "MedianHouseholdIncome"];
+    const angleSliceRadial2 = (2 * Math.PI) / attributesRadial2.length;
+    
+    // Dataset con valores reales
+    const dataRadial2 = [
+      { name: "Cluster 1",   values: { Persons_per_Bedroom: 3.11, Population_Density: 416.57	, MedianFamilyIncome: 1498.09, PercentofPublicTransportation: 14.43, MedianHouseholdIncome: 1246.46 }, color: "purple" },
+      { name: "Cluster 2 (Main)", values: { Persons_per_Bedroom: 2.95, Population_Density: 1264.61, MedianFamilyIncome: 1781.67, PercentofPublicTransportation: 6.83, MedianHouseholdIncome: 1453.93 }, color: "blue" },
+      { name: "Cluster 3",   values: { Persons_per_Bedroom: 3.14, Population_Density: 404.13, MedianFamilyIncome: 1524.26, PercentofPublicTransportation: 7.01, MedianHouseholdIncome: 1249.74 }, color: "green" },
+      { name: "Cluster 4",   values: { Persons_per_Bedroom: 3.11, Population_Density: 688.24, MedianFamilyIncome: 1754.28	, PercentofPublicTransportation: 8.19, MedianHouseholdIncome: 1417.61 }, color: "orange" }
+    ];
+
+    const getExtent2 = key => d3.extent(dataRadial2, d => d.values[key]);
+
+    // Atributos con valores Z-score (ejes con escalas diferentes)
+    const scalesRadial2 = {
+      Persons_per_Bedroom: d3.scaleLinear().domain(getExtent2("Persons_per_Bedroom")).range([0, radius]),
+      Population_Density: d3.scaleLinear().domain(getExtent2("Population_Density")).range([0, radius]),
+      MedianFamilyIncome: d3.scaleLinear().domain(getExtent2("MedianFamilyIncome")).range([0, radius]),
+      PercentofPublicTransportation: d3.scaleLinear().domain(getExtent2("PercentofPublicTransportation")).range([0, radius]),
+      MedianHouseholdIncome: d3.scaleLinear().domain(getExtent2("MedianHouseholdIncome")).range([0, radius])
+    };
+
+    
+    const radial2 = d3.select("#chart-radial-2")
+      .attr("width", widthRadial)
+      .attr("height", heightRadial);
+
+    // Ejes y ticks por atributo
+    attributesRadial2.forEach((attr, i) => {
+      const angle = angleSliceRadial2 * i - Math.PI / 2;
+      const scale = scalesRadial2[attr];
+
+      // Línea del eje
+      const lineX = center.x + Math.cos(angle) * radius;
+      const lineY = center.y + Math.sin(angle) * radius;
+      radial2.append("line")
+        .attr("x1", center.x)
+        .attr("y1", center.y)
+        .attr("x2", lineX)
+        .attr("y2", lineY)
+        .attr("class", "axis");
+
+      // Etiqueta del atributo
+      const labelX = center.x + Math.cos(angle) * (radius + 20);
+      const labelY = center.y + Math.sin(angle) * (radius + 20);
+      radial2.append("text")
+        .attr("x", labelX)
+        .attr("y", labelY)
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "central")
+        .text(attr);
+
+      // Ticks con valores
+      const tickValues = scale.ticks(5);
+      tickValues.forEach(val => {
+        const dist = scale(val);
+        const x = center.x + Math.cos(angle) * dist;
+        const y = center.y + Math.sin(angle) * dist;
+
+        radial2.append("circle")
+          .attr("cx", x)
+          .attr("cy", y)
+          .attr("r", 2)
+          .attr("fill", "#888");
+
+        radial2.append("text")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("dy", "-0.4em")
+          .attr("text-anchor", "middle")
+          .attr("class", "tick-label")
+          .text(val.toFixed(1));
+      });
+    });
+
+    // Función para convertir valores a coordenadas polares
+    function getPathCoordsRadial(entry, attributesRadial, angleSliceRadial, scalesRadial) {
+      return attributesRadial.map((attr, i) => {
+        const angle = angleSliceRadial * i - Math.PI / 2;
+        const r = scalesRadial[attr](entry.values[attr]);
+        return [
+          center.x + Math.cos(angle) * r,
+          center.y + Math.sin(angle) * r
+        ];
+      });
+    }
+
+    // Dibujar líneas
+    const line2 = d3.line().curve(d3.curveLinearClosed);
+
+    const group2 = radial2.append("g");
+    dataRadial2.forEach((entry, idx) => {
+      const coords = getPathCoordsRadial(entry, attributesRadial2, angleSliceRadial2, scalesRadial2);
+
+      const path = group2.append("path")
+        .attr("d", line(coords))
+        .attr("stroke", entry.color)
+        .attr("stroke-width", 30)
+        .attr("fill", entry.color)
+        .attr("class", entry.name === "Cluster 2 (Main)" ? "line line-main" : "line")
+        .attr("data-idx", idx)
+        .on("mouseover", function () {
+          d3.select(this).classed("highlight", true);
+          d3.select(`#legend-${idx}`).classed("legend-highlight", true);
+        })
+        .on("mouseout", function () {
+          d3.select(this).classed("highlight", false);
+          d3.select(`#legend-${idx}`).classed("legend-highlight", false);
+        });
+
+      if (entry.name !== "Cluster 2 (Main)") {
+        // Línea en gris por defecto
+        //path.attr("stroke", "gray");
+      }
+    });
+
+    // Leyenda con colores reales
+    const legendRadial2 = radial2.append("g")
+      .attr("class", "legend")
+      .attr("transform", "translate(310, 130)");
+
+    dataRadial2.forEach((entry, idx) => {
+      const item = legendRadial2.append("g")
+        .attr("transform", `translate(0, ${idx * 20})`)
+        .attr("id", `legend-${idx}`);
+
+      item.append("rect")
+        .attr("width", 12)
+        .attr("height", 12)
+        .attr("fill", entry.color);
+
+      item.append("text")
+        .attr("x", 18)
+        .attr("y", 10)
+        .text(entry.name);
+    });
+
+    /*------------------------- Grafico Radial 3 --------------------------------*/
+
+
+    const attributesRadial3 = ["Population_Density", "Pct_0_1_Bedroom", "MedianPersonIncome", "PercentofPublicTransportation", "Persons_per_Bedroom"];
+    const angleSliceRadial3 = (2 * Math.PI) / attributesRadial3.length;
+    
+    // Dataset con valores reales
+    const dataRadial3 = [
+      { name: "Cluster 1",   values: { Population_Density: 416.57, Pct_0_1_Bedroom: 0.05, MedianPersonIncome: 601.94, PercentofPublicTransportation: 6.83, Persons_per_Bedroom: 3.11 }, color: "purple" },
+      { name: "Cluster 2",   values: { Population_Density: 1264.61, Pct_0_1_Bedroom: 0.06, MedianPersonIncome: 687.20, PercentofPublicTransportation: 14.43, Persons_per_Bedroom: 2.95 }, color: "blue" },
+      { name: "Cluster 3 (Main)", values: { Population_Density: 404.13, Pct_0_1_Bedroom: 0.04, MedianPersonIncome: 605.15, PercentofPublicTransportation: 7.01, Persons_per_Bedroom: 3.14 }, color: "green" },
+      { name: "Cluster 4",   values: { Population_Density: 688.24, Pct_0_1_Bedroom: 0.05, MedianPersonIncome: 686.81, PercentofPublicTransportation: 8.19, Persons_per_Bedroom: 3.11 }, color: "orange" },
+    ];
+
+    const getExtent3 = key => d3.extent(dataRadial3, d => d.values[key]);
+
+    // Atributos con valores Z-score (ejes con escalas diferentes)
+    const scalesRadial3 = {
+      Population_Density: d3.scaleLinear().domain(getExtent3("Population_Density")).range([0, radius]),
+      Pct_0_1_Bedroom: d3.scaleLinear().domain(getExtent3("Pct_0_1_Bedroom")).range([0, radius]),
+      MedianPersonIncome: d3.scaleLinear().domain(getExtent3("MedianPersonIncome")).range([0, radius]),
+      PercentofPublicTransportation: d3.scaleLinear().domain(getExtent3("PercentofPublicTransportation")).range([0, radius]),
+      Persons_per_Bedroom: d3.scaleLinear().domain(getExtent3("Persons_per_Bedroom")).range([0, radius])
+    };
+
+
+    const radial3 = d3.select("#chart-radial-3")
+      .attr("width", widthRadial)
+      .attr("height", heightRadial);
+
+    // Ejes y ticks por atributo
+    attributesRadial3.forEach((attr, i) => {
+      const angle = angleSliceRadial3 * i - Math.PI / 2;
+      const scale = scalesRadial3[attr];
+
+      // Línea del eje
+      const lineX = center.x + Math.cos(angle) * radius;
+      const lineY = center.y + Math.sin(angle) * radius;
+      radial3.append("line")
+        .attr("x1", center.x)
+        .attr("y1", center.y)
+        .attr("x2", lineX)
+        .attr("y2", lineY)
+        .attr("class", "axis");
+
+      // Etiqueta del atributo
+      const labelX = center.x + Math.cos(angle) * (radius + 20);
+      const labelY = center.y + Math.sin(angle) * (radius + 20);
+      radial3.append("text")
+        .attr("x", labelX)
+        .attr("y", labelY)
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "central")
+        .text(attr);
+
+      // Ticks con valores
+      const tickValues = scale.ticks(5);
+      tickValues.forEach(val => {
+        const dist = scale(val);
+        const x = center.x + Math.cos(angle) * dist;
+        const y = center.y + Math.sin(angle) * dist;
+
+        radial3.append("circle")
+          .attr("cx", x)
+          .attr("cy", y)
+          .attr("r", 2)
+          .attr("fill", "#888");
+
+        radial3.append("text")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("dy", "-0.4em")
+          .attr("text-anchor", "middle")
+          .attr("class", "tick-label")
+          .text(val.toFixed(1));
+      });
+    });
+
+    // Función para convertir valores a coordenadas polares
+    function getPathCoordsRadial(entry, attributesRadial, angleSliceRadial, scalesRadial) {
+      return attributesRadial.map((attr, i) => {
+        const angle = angleSliceRadial * i - Math.PI / 2;
+        const r = scalesRadial[attr](entry.values[attr]);
+        return [
+          center.x + Math.cos(angle) * r,
+          center.y + Math.sin(angle) * r
+        ];
+      });
+    }
+
+    // Dibujar líneas
+    const line3 = d3.line().curve(d3.curveLinearClosed);
+
+    const group3 = radial3.append("g");
+    dataRadial3.forEach((entry, idx) => {
+      const coords = getPathCoordsRadial(entry, attributesRadial3, angleSliceRadial3, scalesRadial3);
+
+      const path = group3.append("path")
+        .attr("d", line(coords))
+        .attr("stroke", entry.color)
+        .attr("stroke-width", 30)
+        .attr("fill", "none")
+        .attr("class", entry.name === "Cluster 3 (Main)" ? "line line-main" : "line")
+        .attr("data-idx", idx)
+        .on("mouseover", function () {
+          d3.select(this).classed("highlight", true);
+          d3.select(`#legend-${idx}`).classed("legend-highlight", true);
+        })
+        .on("mouseout", function () {
+          d3.select(this).classed("highlight", false);
+          d3.select(`#legend-${idx}`).classed("legend-highlight", false);
+        });
+
+      if (entry.name !== "Cluster 3 (Main)") {
+        // Línea en gris por defecto
+        // path.attr("stroke", "gray");
+      }
+    });
+
+    // Leyenda con colores reales
+    const legendRadial3 = radial3.append("g")
+      .attr("class", "legend")
+      .attr("transform", "translate(310, 130)");
+
+    dataRadial3.forEach((entry, idx) => {
+      const item = legendRadial3.append("g")
+        .attr("transform", `translate(0, ${idx * 20})`)
+        .attr("id", `legend-${idx}`);
+
+      item.append("rect")
+        .attr("width", 12)
+        .attr("height", 12)
+        .attr("fill", entry.color);
+
+      item.append("text")
+        .attr("x", 18)
+        .attr("y", 10)
+        .text(entry.name);
+    });
+
+
+
+    /*------------------------- Grafico Radial 4 --------------------------------*/
+
+
+    const attributesRadial4 = ["LowIncome%", "MedianPersonIncome", "MedianFamilyIncome", "MedianHouseholdIncome", "Population_Density"];
+    const angleSliceRadial4 = (2 * Math.PI) / attributesRadial3.length;
+    
+    // Dataset con valores reales
+    const dataRadial4 = [
+      { name: "Cluster 1",   values: { "LowIncome%": 0.5, MedianPersonIncome: 1.0, MedianFamilyIncome: 0.0, MedianHouseholdIncome: 0.7, Population_Density: -0.5 }, color: "purple" },
+      { name: "Cluster 2", values: { "LowIncome%": 1.2, MedianPersonIncome: 2.0, MedianFamilyIncome: -1.0, MedianHouseholdIncome: 1.2, Population_Density: 0.5 }, color: "blue" },
+      { name: "Cluster 3",   values: { "LowIncome%": -0.2, MedianPersonIncome: 0.5, MedianFamilyIncome: -2.0, MedianHouseholdIncome: 0.9, Population_Density: -1.0 }, color: "green" },
+      { name: "Cluster 4 (Main)",   values: { "LowIncome%": 1.8, MedianPersonIncome: 2.5, MedianFamilyIncome: -0.5, MedianHouseholdIncome: 1.5, Population_Density: 1.0 }, color: "orange" },
+    ];
+
+    const getExtent4 = key => d3.extent(dataRadial4, d => d.values[key]);
+
+    // Atributos con valores Z-score (ejes con escalas diferentes)
+    const scalesRadial4 = {
+      "LowIncome%": d3.scaleLinear().domain(getExtent4("LowIncome%")).range([0, radius]),
+      MedianPersonIncome: d3.scaleLinear().domain(getExtent4("MedianPersonIncome")).range([0, radius]),
+      MedianFamilyIncome: d3.scaleLinear().domain(getExtent4("MedianFamilyIncome")).range([0, radius]),
+      MedianHouseholdIncome: d3.scaleLinear().domain(getExtent4("MedianHouseholdIncome")).range([0, radius]),
+      Population_Density: d3.scaleLinear().domain(getExtent4("Population_Density")).range([0, radius])
+    };
+    
+
+    const radial4 = d3.select("#chart-radial-4")
+      .attr("width", widthRadial)
+      .attr("height", heightRadial);
+
+    // Ejes y ticks por atributo
+    attributesRadial4.forEach((attr, i) => {
+      const angle = angleSliceRadial4 * i - Math.PI / 2;
+      const scale = scalesRadial4[attr];
+
+      // Línea del eje
+      const lineX = center.x + Math.cos(angle) * radius;
+      const lineY = center.y + Math.sin(angle) * radius;
+      radial4.append("line")
+        .attr("x1", center.x)
+        .attr("y1", center.y)
+        .attr("x2", lineX)
+        .attr("y2", lineY)
+        .attr("class", "axis");
+
+      // Etiqueta del atributo
+      const labelX = center.x + Math.cos(angle) * (radius + 20);
+      const labelY = center.y + Math.sin(angle) * (radius + 20);
+      radial4.append("text")
+        .attr("x", labelX)
+        .attr("y", labelY)
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "central")
+        .text(attr);
+
+      // Ticks con valores
+      const tickValues = scale.ticks(5);
+      tickValues.forEach(val => {
+        const dist = scale(val);
+        const x = center.x + Math.cos(angle) * dist;
+        const y = center.y + Math.sin(angle) * dist;
+
+        radial4.append("circle")
+          .attr("cx", x)
+          .attr("cy", y)
+          .attr("r", 2)
+          .attr("fill", "#888");
+
+        radial4.append("text")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("dy", "-0.4em")
+          .attr("text-anchor", "middle")
+          .attr("class", "tick-label")
+          .text(val.toFixed(1));
+      });
+    });
+
+    // Función para convertir valores a coordenadas polares
+    function getPathCoordsRadial(entry, attributesRadial, angleSliceRadial, scalesRadial) {
+      return attributesRadial.map((attr, i) => {
+        const angle = angleSliceRadial * i - Math.PI / 2;
+        const r = scalesRadial[attr](entry.values[attr]);
+        return [
+          center.x + Math.cos(angle) * r,
+          center.y + Math.sin(angle) * r
+        ];
+      });
+    }
+
+    // Dibujar líneas
+    const line4 = d3.line().curve(d3.curveLinearClosed);
+
+    const group4 = radial4.append("g");
+    dataRadial4.forEach((entry, idx) => {
+      const coords = getPathCoordsRadial(entry, attributesRadial4, angleSliceRadial4, scalesRadial4);
+
+      const path = group4.append("path")
+        .attr("d", line(coords))
+        .attr("stroke", entry.color)
+        .attr("stroke-width", 30)
+        .attr("fill", "none")
+        .attr("class", entry.name === "Cluster 4 (Main)" ? "line line-main" : "line")
+        .attr("data-idx", idx)
+        .on("mouseover", function () {
+          d3.select(this).classed("highlight", true);
+          d3.select(`#legend-${idx}`).classed("legend-highlight", true);
+        })
+        .on("mouseout", function () {
+          d3.select(this).classed("highlight", false);
+          d3.select(`#legend-${idx}`).classed("legend-highlight", false);
+        });
+
+      if (entry.name !== "Cluster 4 (Main)") {
+        // Línea en gris por defecto
+        // path.attr("stroke", "gray");
+      }
+    });
+
+    // Leyenda con colores reales
+    const legendRadial4 = radial4.append("g")
+      .attr("class", "legend")
+      .attr("transform", "translate(310, 130)");
+
+    dataRadial4.forEach((entry, idx) => {
+      const item = legendRadial4.append("g")
+        .attr("transform", `translate(0, ${idx * 20})`)
+        .attr("id", `legend-${idx}`);
+
+      item.append("rect")
+        .attr("width", 12)
+        .attr("height", 12)
+        .attr("fill", entry.color);
+
+      item.append("text")
+        .attr("x", 18)
+        .attr("y", 10)
+        .text(entry.name);
+    });
+
+
+    /*---------------------------Interacciones----------------------*/
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulación de Brote</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+  <style>
+    body { font-family: sans-serif; }
+    #sliderContainer {
+      width: 600px;
+      margin: 10px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="sliderContainer">
+    <input type="range" id="monthSlider" min="1" max="24" value="1" step="1" disabled>
+    <div>Mes: <span id="monthLabel">1</span></div>
+  </div>
+  <svg width="800" height="800"></svg>
+
+  <script>
+    const width = 800, height = 800;
+    const svg = d3.select("svg");
+    const projection = d3.geoMercator().fitSize([width, height], { type: "FeatureCollection", features: [] });
+    const path = d3.geoPath().projection(projection);
+
+    const monthSlider = document.getElementById("monthSlider");
+    const monthLabel = document.getElementById("monthLabel");
+
+    // Cargar GeoJSON
+    d3.json("nsw_lga_polygon_V5.geojson").then(geojson => {
+      projection.fitSize([width, height], geojson);
+
+      // Dibujar mapa base
+      svg.selectAll("path")
+        .data(geojson.features)
+        .enter()
+        .append("path")
+        .attr("d", path)
+        .attr("fill", "#ddd")
+        .attr("stroke", "#555");
+
+      // Escoger un LGA inicial aleatorio
+      const initialIndex = Math.floor(Math.random() * geojson.features.length);
+      let infectedLGAs = [geojson.features[initialIndex].properties.LGA_CODE21];
+
+      // Mapeo para seguir los casos por LGA
+      const contagiosPorLGA = {};
+
+      // Inicializar todos en 0
+      geojson.features.forEach(f => contagiosPorLGA[f.properties.LGA_CODE21] = 0);
+
+      // Brote inicial
+      contagiosPorLGA[geojson.features[initialIndex].properties.LGA_CODE21] = 5;
+
+      function generarPuntos(feature, cantidad) {
+        const bbox = turf.bbox(feature);
+        const puntos = [];
+        while (puntos.length < cantidad) {
+          const p = turf.randomPoint(1, { bbox }).features[0];
+          if (turf.booleanPointInPolygon(p, feature)) {
+            puntos.push(p);
+          }
+        }
+        return puntos;
+      }
+
+      let mes = 1;
+
+      function actualizarMapa() {
+        monthSlider.value = mes;
+        monthLabel.textContent = mes;
+
+        // Limpiar puntos anteriores
+        svg.selectAll("circle").remove();
+        console.log("contagiosPorLGA", contagiosPorLGA)
+        geojson.features.forEach(feature => {
+          const lgaCode = feature.properties.LGA_CODE21;
+          const cantidad = contagiosPorLGA[lgaCode];
+          if (cantidad > 0) {
+            const puntos = generarPuntos(feature, cantidad);
+            svg.selectAll(null)
+              .data(puntos)
+              .enter()
+              .append("circle")
+              .attr("cx", d => projection(d.geometry.coordinates)[0])
+              .attr("cy", d => projection(d.geometry.coordinates)[1])
+              .attr("r", 1.5)
+              .attr("fill", "red")
+              .attr("opacity", 0.7);
+          }
+        });
+
+        // Propagación aleatoria a vecinos
+        const nuevosContagios = {};
+        geojson.features.forEach(feature => {
+          const lgaCode = feature.properties.LGA_CODE21;
+          const casos = contagiosPorLGA[lgaCode];
+          if (casos > 0) {
+            // Infectar hasta 2 nuevos LGA cercanos aleatorios
+            const vecinos = geojson.features
+              .filter(f => f !== feature && Math.random() < 0.05)
+              .map(f => f.properties.LGA_CODE21);
+            vecinos.forEach(vecino => {
+              if (!infectedLGAs.includes(vecino)) {
+                nuevosContagios[vecino] = (nuevosContagios[vecino] || 0) + Math.floor(Math.random() * 10) + 5;
+                infectedLGAs.push(vecino);
+              }
+            });
+
+            // Aumentar contagios en LGA actual
+            contagiosPorLGA[lgaCode] += Math.floor(Math.random() * 2);
+          }
+        });
+
+        // Aplicar nuevos contagios
+        Object.entries(nuevosContagios).forEach(([lga, cantidad]) => {
+          contagiosPorLGA[lga] += cantidad;
+        });
+      }
+
+      // Animar cada mes (cada segundo)
+      const interval = setInterval(() => {
+        if (mes > 24) {
+          clearInterval(interval);
+          return;
+        }
+        actualizarMapa();
+        mes++;
+      }, 1000);
+    });
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa de Casos Acumulados</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    #sliderContainer {
+      width: 600px;
+      margin: 20px auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="sliderContainer">
+    <input type="range" id="monthSlider" min="0" max="23" value="0" step="1" disabled>
+    <div>Mes: <span id="monthLabel">Enero 2020</span></div>
+  </div>
+  <svg id="svgMap" width="900" height="900"></svg>
+
+  <script>
+    const svgMap = d3.select("#svgMap");
+    const widthMap = +svgMap.attr("width");
+    const heightMap = +svgMap.attr("height");
+    const projection = d3.geoMercator();
+    const path = d3.geoPath().projection(projection);
+
+    const monthSlider = document.getElementById("monthSlider");
+    const monthLabel = document.getElementById("monthLabel");
+
+    const monthNames = [
+      "Enero 2020", "Febrero 2020", "Marzo 2020", "Abril 2020", "Mayo 2020", "Junio 2020",
+      "Julio 2020", "Agosto 2020", "Septiembre 2020", "Octubre 2020", "Noviembre 2020", "Diciembre 2020",
+      "Enero 2021", "Febrero 2021", "Marzo 2021", "Abril 2021", "Mayo 2021", "Junio 2021",
+      "Julio 2021", "Agosto 2021", "Septiembre 2021", "Octubre 2021", "Noviembre 2021", "Diciembre 2021"
+    ];
+
+    Promise.all([
+      d3.json("nsw_lga_polygon_V5.geojson"),
+      d3.csv("../dashboard_data/mapa_casos_por_lga/covid_monthly_summary_filled.csv", d => ({
+        lga_code: d.lga_code19,
+        month: d.year_month,
+        cases: +d.CumulativeCases
+      }))
+    ]).then(([geojson, csvData]) => {
+      // Reorganizar CSV: { lga_code: { "2020-01": 0, ..., "2021-12": 500 } }
+      const casesPerLGA = {};
+      csvData.forEach(d => {
+        if (!casesPerLGA[d.lga_code]) casesPerLGA[d.lga_code] = {};
+        casesPerLGA[d.lga_code][d.month] = d.cases;
+      });
+
+      // Lista ordenada de fechas únicas
+      const months = Array.from(new Set(csvData.map(d => d.month))).sort();
+
+      projection.fitSize([widthMap, heightMap], geojson);
+      svgMap.selectAll("path")
+        .data(geojson.features)
+        .enter()
+        .append("path")
+        .attr("d", path)
+        .attr("fill", "#eee")
+        .attr("stroke", "#333");
+
+      function generatePointsInPolygon(polygon, count) {
+        const points = [];
+        const bbox = turf.bbox(polygon);
+        let tries = 0;
+        while (points.length < count && tries < count * 10) {
+          const pt = turf.randomPoint(1, { bbox }).features[0];
+          if (turf.booleanPointInPolygon(pt, polygon)) {
+            points.push(pt);
+          }
+          tries++;
+        }
+        return points;
+      }
+
+      function updateMap(monthIndex) {
+        const currentMonth = months[monthIndex];
+        monthLabel.textContent = monthNames[monthIndex];
+        svgMap.selectAll("circle").remove();
+
+        geojson.features.forEach(feature => {
+          // const code = feature.properties.LGA_CODE21;
+          const code = feature.properties.lgacode;
+          const cases = casesPerLGA[code]?.[currentMonth] || 0;
+
+          // Escalar los casos si hay demasiados (opcional: limitar visualización)
+          // const scaledCases = Math.min(Math.round(cases / 10), 500); // 1 punto = 10 casos
+          // const scaledCases = Math.min(Math.round(cases * 2), 500);
+          const scaledCases = cases;
+          console.log("scaledCases", scaledCases)
+          const points = generatePointsInPolygon(feature, scaledCases);
+          console.log("points", points)
+          svgMap.selectAll(null)
+            .data(points)
+            .enter()
+            .append("circle")
+            .attr("cx", d => projection(d.geometry.coordinates)[0])
+            .attr("cy", d => projection(d.geometry.coordinates)[1])
+            .attr("r", 1.5)
+            .attr("fill", "red")
+            .attr("opacity", 0.7);
+        });
+      }
+
+      let currentMonthIndex = 0;
+      updateMap(currentMonthIndex);
+
+      const interval = setInterval(() => {
+        currentMonthIndex++;
+        if (currentMonthIndex >= months.length) {
+          clearInterval(interval);
+          return;
+        }
+        monthSlider.value = currentMonthIndex;
+        updateMap(currentMonthIndex);
+      }, 1000); // cada segundo
+
+    });
+  </script>
+</body>
+</html>

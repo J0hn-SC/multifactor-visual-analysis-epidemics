@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>COVID Socio-Dashboard</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    .dashboard-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .select-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chart-container {
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 1.8rem;
+    }
+
+    /* svg {
+      width: 100%;
+      height: 400px;
+    } */
+
+    h2 {
+      margin-top: 0;
+    }
+
+    #legend {
+        /* margin-left: 20px; */
+        /* width: auto; */
+    }
+
+    #map {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .v-select-solo {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 300px;
+      margin: 1rem 0;
+    }
+
+    .v-select-solo label {
+      font-size: 14px;
+      color: #6b6b6b;
+      margin-bottom: 4px;
+    }
+
+    .v-select-solo select {
+      appearance: none;
+      background-color: #fff;
+      border: none;
+      border-bottom: 2px solid #c0c0c0;
+      padding: 10px 12px;
+      font-size: 16px;
+      border-radius: 4px 4px 0 0;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+    }
+
+    .v-select-solo select:focus {
+      border-bottom-color: #1976d2;
+      box-shadow: 0 1px 0 0 #1976d2;
+    }
+
+    .v-select-solo::after {
+      content: "▼";
+      position: absolute;
+      right: 12px;
+      top: 36px;
+      pointer-events: none;
+      color: #888;
+      font-size: 12px;
+    }
+
+    .content {
+        /* display: flex; */
+        /* justify-content: center; */
+        display: grid;
+        grid-template-columns: 65% 35%;
+        gap: 1rem;
+        align-items: center;
+        
+    }
+
+    .mapa-section {
+        width: 60%;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .radio-group {
+  display: flex;
+  gap: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.radio-option input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.custom-radio {
+  height: 18px;
+  width: 18px;
+  border: 2px solid #1976d2;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.radio-option input[type="radio"]:checked + .custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 8px;
+  width: 8px;
+  background-color: #1976d2;
+  border-radius: 50%;
+}
+  </style>
+</head>
+<body>
+
+<h1>COVID-19 Dashboard: Casos y Datos Sociodemográficos por LGA</h1>
+
+<div class="chart-container">
+    <div class="title">
+        <h2>🗺️ Mapa Interactivo de Datos Sociodemográficos: </h2>
+        <div class="v-select-solo">
+            <select id="variable-select"></select>
+        </div>
+    </div>
+    <div class="content">
+        <div id="map">
+            <svg id="mapa"></svg>
+            <svg id="legend"></svg>
+            <div id="tooltip" style="position: absolute; opacity: 0; background: white; border: 1px solid #999; padding: 5px; border-radius: 4px; pointer-events: none; font-size: 12px;"></div>
+        </div>
+        <div id="plot">
+            <div class="v-select-solo" style="display: flex; justify-content: center;">
+                <label for="caseTypeSelect">Tipo de casos:</label>
+                <select id="caseTypeSelect">
+                    <option value="TotalCases">Total</option>
+                    <option value="CasesPerPerson">Por persona</option>
+                    <option value="CasesPer100k">Por 100k personas</option>
+                </select>
+            </div>
+            <div id="scatter">
+                <h2>📊 Correlación: Variable vs Casos COVID</h2>
+                <svg></svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="timeline" class="chart-container">
+    <div class="title">
+        <h2>🗺️ Mapa Interactivo de Casos de Covid-19 por LGA: </h2>
+    </div>
+    <div class="content">
+        <div id="" style="display: flex; justify-content: center;">
+            <svg id="map2" width="600" height="600"></svg>
+            <div id="tooltip2" style="position: absolute; visibility: hidden; padding: 6px 10px; background: rgba(0,0,0,0.7); color: white; border-radius: 5px; font-size: 13px; pointer-events: none;"></div>
+        </div>
+        <div>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="mode" value="monthly" checked>
+                    <span class="custom-radio"></span>
+                    Casos mensuales
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="mode" value="cumulative">
+                    <span class="custom-radio"></span>
+                    Casos acumulados
+                </label>
+            </div>
+            <div class="v-select-solo">
+                <select id="month-select"> <!-- Aquí se insertarán los options en JS --> </select>
+            </div>
+
+            <div id="summary">
+                <h3 id="summary-title"></h3>
+            <div id="summary-total"></div>
+        </div>
+    </div>
+    
+
+    
+</div>
+<script>
+
+document.getElementById("caseTypeSelect").addEventListener("change", () => {
+    const selectedVar = document.getElementById("variable-select").value;
+    drawScatter(selectedVar);
+});
+
+
+const width = 800;
+const height = 600;
+
+const svg = d3.select("#map #mapa")
+    .attr("width", width)
+    .attr("height", height);
+
+// Proyección centrada en NSW, Australia
+const projection = d3.geoMercator()
+    .center([148.5, -33.5])  // Aproximado
+    .scale(4500)             // Escala ajustable
+    .translate([width / 2, height / 2]);
+
+const path = d3.geoPath().projection(projection);
+
+var censusData, geojsonData;
+
+Promise.all([
+    d3.csv("../dashboard_data/common/census_clean.csv"),
+    d3.json("../original_data/nsw_lga_polygon_V5.geojson")
+    ]).then(([csv, geo]) => {
+    censusData = csv;
+    geojsonData = geo;
+
+    // Extraer nombres de variables
+    const variables = csv.columns.slice(3, -1); // O ajusta según tu estructura
+    const defaultVar = variables[0];
+
+    // Llenar el select
+    d3.select("#variable-select")
+        .selectAll("option")
+        .data(variables)
+        .enter()
+        .append("option")
+        .attr("value", d => d)
+        .text(d => d);
+
+    drawMap(defaultVar);
+    const selectedVar = document.getElementById("variable-select").value;
+    drawScatter(selectedVar)
+
+    d3.select("#variable-select").on("change", function () {
+        const selected = d3.select(this).property("value");
+        console.log("selected", selected)
+        drawMap(selected);
+        const selectedVar = document.getElementById("variable-select").value;
+        drawScatter(selectedVar);
+    });
+});
+
+function drawMap(variable) {
+    // Crear escala de color
+    const values = censusData.map(d => +d[variable]).filter(v => !isNaN(v));
+    const colorScale = d3.scaleSequential()
+        .domain([d3.min(values), d3.max(values)])
+        .interpolator(d3.interpolateBlues);
+    // Vincular valores del CSV al GeoJSON
+    geojsonData.features.forEach(feature => {
+        const lgaCode = feature.properties.lgacode;
+        const row = censusData.find(d => d.lga_code19 === lgaCode);
+        feature.properties._value = row ? +row[variable] : null;
+        feature.properties._name = row ? row.LGA_Name : 'Error'
+    });
+
+    // Dibujar paths con colores
+    svg.selectAll("path")
+    .data(geojsonData.features)
+    .join("path")
+    .attr("d", path)
+    .attr("fill", d => {
+    const val = d.properties._value;
+    //console.log("val", val)
+    return val != null ? colorScale(val) : "#ccc"; // gris si no hay dato
+    })
+    .attr("stroke", "#333")
+    .attr("stroke-width", 0.5)
+    .on("mouseover", function (event, d) {
+        const lgaCode = d.properties.lgacode;
+        const lgaName = d.properties._name || "LGA Name";
+        const value = d.properties._value;
+        const formattedValue = value !== null ? d3.format(",")(value) : "N/A";
+
+        d3.select(this).attr("fill", "#66ccaa");
+
+        d3.select("#tooltip")
+            .style("opacity", 1)
+            .html(`
+                <strong>${lgaName} (${lgaCode})</strong><br/>
+                ${variable}: ${formattedValue}
+            `);
+    })
+    .on("mousemove", function (event) {
+        d3.select("#tooltip")
+            .style("left", (event.pageX + 15) + "px")
+            .style("top", (event.pageY - 28) + "px");
+    })
+    .on("mouseout", function (event, d) {
+        d3.select(this).attr("fill", () => {
+            const val = d.properties._value;
+            return val != null ? colorScale(val) : "#ccc";
+        });
+
+        d3.select("#tooltip").style("opacity", 0);
+    });
+
+    drawLegend(colorScale, variable);
+}
+
+function drawLegend(colorScale, variable) {
+  const legendHeight = 600;
+  const legendWidth = 120;
+
+  const legendSvg = d3.select("#legend")
+    .attr("width", 100)
+    // .attr("width", legendWidth)
+    .attr("height", legendHeight + 40); // espacio extra para etiquetas
+
+  // Elimina contenido anterior
+  legendSvg.selectAll("*").remove();
+
+  // Crear gradiente
+  const defs = legendSvg.append("defs");
+  const gradient = defs.append("linearGradient")
+    .attr("id", "legend-gradient")
+    .attr("x1", "0%")
+    .attr("y1", "100%")
+    .attr("x2", "0%")
+    .attr("y2", "0%");
+
+  // Añadir colores
+  const stops = 10;
+  const domain = colorScale.domain();
+  for (let i = 0; i <= stops; i++) {
+    const t = i / stops;
+    gradient.append("stop")
+      .attr("offset", `${t * 100}%`)
+      .attr("stop-color", colorScale(domain[0] + t * (domain[1] - domain[0])));
+  }
+
+  // Dibujar rectángulo con el gradiente
+  legendSvg.append("rect")
+    .attr("x", 40)
+    .attr("y", 20)
+    .attr("width", legendWidth)
+    .attr("height", legendHeight)
+    .style("fill", "url(#legend-gradient)")
+    .style("stroke", "#333");
+
+  // Escala para valores
+  const scale = d3.scaleLinear()
+    .domain(domain)
+    .range([legendHeight + 20, 20]);
+
+  const axis = d3.axisRight(scale).ticks(6);
+
+  legendSvg.append("g")
+    .attr("class", "legend-axis")
+    .attr("transform", `translate(${40 + legendWidth}, 0)`)
+    .call(axis);
+
+  // Título de la leyenda
+  legendSvg.append("text")
+    .attr("x", 10)
+    .attr("y", 15)
+    .text(`Escala de ${variable}`)
+    .style("font-size", "12px")
+    .style("font-weight", "bold");
+}
+
+
+function drawScatter(variable) {
+    const caseType = document.getElementById("caseTypeSelect").value;
+
+    // Limpia el gráfico anterior
+    d3.select("#scatter").selectAll("*").remove();
+
+    // Dimensiones
+    const width = 600;
+    const height = 400;
+    const margin = { top: 40, right: 40, bottom: 60, left: 80 };
+
+    const svg = d3.select("#scatter")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    const x = d3.scaleLinear()
+        .domain(d3.extent(censusData, d => +d[variable]))
+        .range([margin.left, width - margin.right]);
+    
+    console.log("x", x)
+    
+    const y = d3.scaleLinear()
+    .domain(d3.extent(censusData, d => +d[caseType]))
+    .range([height - margin.bottom, margin.top]);
+    
+    console.log("y", y)
+    // Ejes
+    svg.append("g")
+        .attr("transform", `translate(0,${height - margin.bottom})`)
+        .call(d3.axisBottom(x));
+
+    svg.append("g")
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft(y));
+
+    // Títulos
+    svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", margin.top / 2)
+        .attr("text-anchor", "middle")
+        .style("font-weight", "bold")
+        .text(`Relación entre ${variable} y ${caseType}`);
+
+    // Eje X
+    svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", height - 10)
+        .attr("text-anchor", "middle")
+        .text(variable);
+
+    // Eje Y
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", 15)
+        .attr("text-anchor", "middle")
+        .text(caseType);
+
+    // Puntos
+    svg.selectAll("circle")
+        .data(censusData)
+        .join("circle")
+        .attr("cx", d => x(+d[variable]))
+        .attr("cy", d => y(+d[caseType]))
+        .attr("r", 4)
+        .attr("fill", "#66ccaa")
+        .on("mouseover", (event, d) => {
+            d3.select("#tooltip")
+              .style("opacity", 1)
+              .html(`
+                <strong>${d.LGA_Name} (${d.lga_code19})</strong><br/>
+                ${variable}: ${d3.format(",.2f")(+d[variable])}<br/>
+                ${caseType}: ${d3.format(",.2f")(+d[caseType])}
+              `);
+        })
+        .on("mousemove", (event) => {
+            d3.select("#tooltip")
+              .style("left", (event.pageX + 15) + "px")
+              .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", () => {
+            d3.select("#tooltip").style("opacity", 0);
+        });
+}
+//-------------------------------------------------------------------------------------------------------
+//----------------------------------Map Of Cases By LGA---------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------------
+
+
+let covidMonthlyData; // Cargado desde covid_monthly_summary.csv
+let currentMode = "monthly";
+let currentMonth = "2020-01";
+
+// Cargar datos
+Promise.all([
+  d3.json("../original_data/nsw_lga_polygon_V5.geojson"),
+  d3.csv("../dashboard_data/map_of_cases_by_lga/covid_monthly_summary_filled.csv")
+]).then(([geojson, covidData]) => {
+  covidMonthlyData = covidData;
+
+    geojson.features.forEach(feature => {
+        const lgaCode = feature.properties.lgacode;
+        const row = censusData.find(d => d.lga_code19 === lgaCode);
+        feature.properties._name = row ? row.LGA_Name : 'Error'
+    });
+  // Llenar select de meses
+    // const months = [...new Set(covidData.map(d => d.year_month))];
+    const months = [...new Set(covidData.map(d => d.year_month))]
+    .sort((a, b) => new Date(a + "-01") - new Date(b + "-01"));
+
+    months.forEach(month => {
+        const [year, monthNum] = month.split("-").map(Number); // Descomponemos
+        const dateObj = new Date(year, monthNum - 1); // Construcción segura (mes 0-indexado)
+
+        d3.select("#month-select")
+            .append("option")
+            .attr("value", month)
+            .text(d3.timeFormat("%B %Y")(dateObj));
+    });
+
+  // Listeners
+  d3.selectAll("input[name='mode']").on("change", function () {
+    currentMode = this.value;
+    updateMapAndSummary();
+  });
+
+  d3.select("#month-select").on("change", function () {
+    currentMonth = this.value;
+    updateMapAndSummary();
+  });
+
+  const svg2 = d3.select("#map2")
+    .attr("width", width)
+    .attr("height", height);
+
+  // Draw initial
+  function updateMapAndSummary() {
+    // Extraer los datos para ese mes
+    const filtered = covidMonthlyData.filter(d => d.year_month === currentMonth);
+    const valueField = currentMode === "monthly" ? "MonthlyCases" : "CumulativeCases";
+
+    // Mapeo por lga_code19
+    const lgaCases = new Map(filtered.map(d => [d.lga_code19, +d[valueField]]));
+    console.log("lgaCases", lgaCases)
+
+    // Total general
+    const total = d3.sum(filtered, d => +d[valueField]);
+
+    // Actualizar leyenda
+    d3.select("#summary-title").text(
+      currentMode === "monthly"
+        ? `Total de casos en ${currentMonth}`
+        : `Total acumulado hasta ${currentMonth}`
+    );
+    d3.select("#summary-total").text(total.toLocaleString());
+
+    // Color scale
+    const maxVal = d3.max(filtered, d => +d[valueField]);
+    const color = d3.scaleSequential()
+      .domain([0, maxVal])
+      .interpolator(d3.interpolateReds);
+
+    svg2.selectAll("path")
+    .data(geojson.features)
+    .join("path")
+    .attr("d", path)
+    .attr("fill", d => {
+    const val = lgaCases.get(d.properties.lgacode);
+    return val != null ? color(val) : "#ccc"; // gris si no hay dato
+    })
+    .attr("stroke", "#333")
+    .attr("stroke-width", 0.5)
+    .on("mouseover", function (event, d) {
+        console.log("lgaCases", lgaCases)
+        console.log("d.properties", d.properties)
+        const val = lgaCases.get(d.properties.lgacode);
+        console.log("val", val)
+        const name = d.properties._name;
+        const value = val ? val : 0;
+
+        d3.select(this)
+        .attr("stroke", "black")
+        .attr("stroke-width", 1.5);
+
+        tooltip
+        .style("visibility", "visible")
+        .html(`<strong>${name}</strong><br>${valueField === "CumulativeCases" ? "Casos acumulados" : "Casos mensuales"}: ${value}`);
+    })
+    .on("mousemove", event => {
+        tooltip
+        .style("top", (event.pageY - 30) + "px")
+        .style("left", (event.pageX + 15) + "px");
+    })
+    .on("mouseout", function () {
+        d3.select(this)
+        .attr("stroke", "#999")
+        .attr("stroke-width", 1);
+
+        tooltip.style("visibility", "hidden");
+    });
+
+
+  }
+
+  updateMapAndSummary(); // inicial
+
+
+  const tooltip = d3.select("#tooltip2");
+
+});
+
+
+</script>
+
+</body>
+</html>

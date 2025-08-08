@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Context Map with Distances</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body { font-family: sans-serif; }
+    .tooltip-context-map {
+      position: absolute;
+      background: rgba(0,0,0,0.85);
+      color: white;
+      padding: 8px;
+      border-radius: 4px;
+      pointer-events: none;
+      font-size: 12px;
+      line-height: 1.4em;
+      max-width: 300px;
+    }
+    .axis line, .axis path {
+      stroke: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>Context Map (D3.js)</h2>
+  <svg id="context-map" width="900" height="700"></svg>
+  <div class="tooltip-context-map" style="display: none;"></div>
+
+  <script>
+    const svg = d3.select("#context-map"),
+          width = +svg.attr("width"),
+          height = +svg.attr("height"),
+          margin = 50;
+
+    const tooltip = d3.select(".tooltip-context-map");
+
+    d3.json("context_map.json").then(data => {
+      const points = data.points;
+      const distances = data.distances;
+      const contours = data.contours || [];
+
+      // Escalado
+      const xExtent = d3.extent(points, d => d.x);
+      const yExtent = d3.extent(points, d => d.y);
+
+      const xScale = d3.scaleLinear().domain(xExtent).range([margin, width - margin]);
+      const yScale = d3.scaleLinear().domain(yExtent).range([height - margin, margin]);
+
+      // Ejes
+      svg.append("g")
+         .attr("transform", `translate(0,${height - margin})`)
+         .call(d3.axisBottom(xScale));
+      svg.append("g")
+         .attr("transform", `translate(${margin},0)`)
+         .call(d3.axisLeft(yScale));
+
+      // Contornos (si existen)
+      contours.forEach(path => {
+        svg.append("path")
+          .datum(path)
+          .attr("fill", "none")
+          .attr("stroke", "black")
+          .attr("stroke-width", 1)
+          .attr("d", d3.line()
+            .x(d => xScale(d.x))
+            .y(d => yScale(d.y))
+          );
+      });
+
+      // Dibujar puntos
+      svg.selectAll("circle")
+        .data(points)
+        .enter()
+        .append("circle")
+        .attr("cx", d => xScale(d.x))
+        .attr("cy", d => yScale(d.y))
+        .attr("r", 5)
+        .attr("fill", d => d.type === "data" ? "steelblue" : "crimson")
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 0.5)
+        .on("mouseover", (event, d) => {
+          if (d.type === "data") {
+            const distList = distances[d.name];
+            const html = `<strong>${d.name}</strong><br><br>` +
+              distList.map(v => `${v.variable}: <strong>${v.distance.toFixed(2)}</strong>`).join("<br>");
+            tooltip.style("display", "block").html(html);
+          } else {
+            tooltip.style("display", "block").html(`<strong>${d.name}</strong>`);
+          }
+        })
+        .on("mousemove", event => {
+          tooltip.style("left", (event.pageX + 10) + "px")
+                 .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", () => tooltip.style("display", "none"));
+
+      // Etiquetas para variables
+      svg.selectAll("text.label")
+        .data(points.filter(d => d.type === "variable"))
+        .enter()
+        .append("text")
+        .attr("x", d => xScale(d.x))
+        .attr("y", d => yScale(d.y) - 8)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "10px")
+        .attr("fill", "darkred")
+        .text(d => d.name);
+    });
+  </script>
+</body>
+</html>

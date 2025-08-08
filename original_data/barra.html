@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Slider tipo Vuetify</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 30px;
+      background-color: #f9f9f9;
+    }
+
+    .slider-container {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      padding: 40px 0 50px 0;
+    }
+
+    .slider {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      background: #ccc;
+      outline: none;
+      border-radius: 3px;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      background: #1976d2;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid white;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .slider::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      background: #1976d2;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid white;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .ticks {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      position: relative;
+    }
+
+    .tick {
+      height: 10px;
+      width: 2px;
+      background-color: #888;
+    }
+
+    .labels {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .label {
+      color: rgba(0, 0, 0, 0.4);
+      white-space: nowrap;
+      text-align: center;
+      flex: 1;
+    }
+
+    .label.active {
+      color: #1976d2;
+      font-weight: bold;
+    }
+
+    .checkbox {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      <input id="mesSlider" type="range" min="0" max="23" value="0" class="slider" step="1" />
+      <div class="ticks" id="ticks"></div>
+      <div class="labels" id="labels"></div>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox" id="modoAuto" checked />
+      <label for="modoAuto">Modo automático</label>
+    </div>
+  </div>
+
+  <script>
+    const meses = [
+      "Ene 23", "Feb 23", "Mar 23", "Abr 23", "May 23", "Jun 23",
+      "Jul 23", "Ago 23", "Sep 23", "Oct 23", "Nov 23", "Dic 23",
+      "Ene 24", "Feb 24", "Mar 24", "Abr 24", "May 24", "Jun 24",
+      "Jul 24", "Ago 24", "Sep 24", "Oct 24", "Nov 24", "Dic 24"
+    ];
+
+    const slider = document.getElementById('mesSlider');
+    const autoCheckbox = document.getElementById('modoAuto');
+    const labelsContainer = document.getElementById('labels');
+    const ticksContainer = document.getElementById('ticks');
+
+    let intervalo;
+    let enModoAuto = true;
+
+    // Inicializa labels
+    function crearLabels() {
+      labelsContainer.innerHTML = "";
+      ticksContainer.innerHTML = "";
+
+      meses.forEach((mes, i) => {
+        const label = document.createElement('div');
+        label.classList.add('label');
+        label.innerText = mes;
+        labelsContainer.appendChild(label);
+
+        const tick = document.createElement('div');
+        tick.classList.add('tick');
+        ticksContainer.appendChild(tick);
+      });
+    }
+
+    function actualizarSliderVisual(pos) {
+      [...labelsContainer.children].forEach((label, i) => {
+        if (i === pos) {
+          label.classList.add('active');
+        } else {
+          label.classList.remove('active');
+        }
+      });
+    }
+
+    function iniciarAutomatico() {
+      intervalo = setInterval(() => {
+        let nuevo = parseInt(slider.value) + 1;
+        if (nuevo > 23) {
+          clearInterval(intervalo);
+          setTimeout(() => {
+            if (enModoAuto) {
+              slider.value = 0;
+              actualizarSliderVisual(0);
+              iniciarAutomatico();
+            }
+          }, 2000);
+        } else {
+          slider.value = nuevo;
+          actualizarSliderVisual(nuevo);
+        }
+      }, 1000);
+    }
+
+    // Evento de cambio manual
+    slider.addEventListener('input', () => {
+      actualizarSliderVisual(parseInt(slider.value));
+      if (enModoAuto) {
+        autoCheckbox.checked = false;
+        cambiarModo(false);
+      }
+    });
+
+    autoCheckbox.addEventListener('change', e => {
+      cambiarModo(e.target.checked);
+    });
+
+    function cambiarModo(modo) {
+      enModoAuto = modo;
+      if (modo) iniciarAutomatico();
+      else clearInterval(intervalo);
+    }
+
+    // Inicializar
+    crearLabels();
+    actualizarSliderVisual(0);
+    iniciarAutomatico();
+  </script>
+
+</body>
+</html>

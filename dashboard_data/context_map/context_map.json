@@ -1,0 +1,6259 @@
+{
+  "points": [
+    {
+      "type": "data",
+      "name": "D1",
+      "x": -0.027553050364623438,
+      "y": 0.3245200470353835
+    },
+    {
+      "type": "data",
+      "name": "D2",
+      "x": -0.040065944750616395,
+      "y": 0.8538163213407183
+    },
+    {
+      "type": "data",
+      "name": "D3",
+      "x": 1.5710307127414815,
+      "y": -0.21483126934584154
+    },
+    {
+      "type": "data",
+      "name": "D4",
+      "x": 0.36920747379997,
+      "y": 1.7769712181541617
+    },
+    {
+      "type": "data",
+      "name": "D5",
+      "x": -0.32346760280162673,
+      "y": 0.7643356523194963
+    },
+    {
+      "type": "data",
+      "name": "D6",
+      "x": -2.181349307683191,
+      "y": -3.468164931693784
+    },
+    {
+      "type": "data",
+      "name": "D7",
+      "x": 2.6061782540223115,
+      "y": -0.1902882817457619
+    },
+    {
+      "type": "data",
+      "name": "D8",
+      "x": 2.530525445414773,
+      "y": 0.5404440156842817
+    },
+    {
+      "type": "data",
+      "name": "D9",
+      "x": 2.2339254588655066,
+      "y": 1.0507387656377603
+    },
+    {
+      "type": "data",
+      "name": "D10",
+      "x": -1.5678581645187015,
+      "y": -6.9508228308868585
+    },
+    {
+      "type": "data",
+      "name": "D11",
+      "x": 0.8708057727493825,
+      "y": 1.844771915982679
+    },
+    {
+      "type": "data",
+      "name": "D12",
+      "x": 0.7930285293832329,
+      "y": 1.3047226751958307
+    },
+    {
+      "type": "data",
+      "name": "D13",
+      "x": -0.0020413845836180704,
+      "y": -0.9636120529542489
+    },
+    {
+      "type": "data",
+      "name": "D14",
+      "x": 0.28260616494302104,
+      "y": 1.6050759415573208
+    },
+    {
+      "type": "data",
+      "name": "D15",
+      "x": -0.6511124658455363,
+      "y": 2.4635361753478953
+    },
+    {
+      "type": "data",
+      "name": "D16",
+      "x": 0.7879251162926109,
+      "y": 3.1683591871055405
+    },
+    {
+      "type": "data",
+      "name": "D17",
+      "x": 1.6546616058966883,
+      "y": 0.8138788528251565
+    },
+    {
+      "type": "data",
+      "name": "D18",
+      "x": -4.3906408033134845,
+      "y": 2.0274877547635675
+    },
+    {
+      "type": "data",
+      "name": "D19",
+      "x": 0.7734150948262499,
+      "y": 0.741886663793816
+    },
+    {
+      "type": "data",
+      "name": "D20",
+      "x": 0.7102378172208056,
+      "y": 1.2622835956590621
+    },
+    {
+      "type": "data",
+      "name": "D21",
+      "x": -2.7869038962269244,
+      "y": 0.06937160159812507
+    },
+    {
+      "type": "data",
+      "name": "D22",
+      "x": -1.0201102036440308,
+      "y": -2.646039281262712
+    },
+    {
+      "type": "data",
+      "name": "D23",
+      "x": -4.090335500568472,
+      "y": -0.6478808509097158
+    },
+    {
+      "type": "data",
+      "name": "D24",
+      "x": -1.9042543149064273,
+      "y": -7.893954379342879
+    },
+    {
+      "type": "data",
+      "name": "D25",
+      "x": 0.09715300339430795,
+      "y": 1.762021989025089
+    },
+    {
+      "type": "data",
+      "name": "D26",
+      "x": 0.47754929547386427,
+      "y": -8.680415044063835
+    },
+    {
+      "type": "data",
+      "name": "D27",
+      "x": 1.1007645642811268,
+      "y": 2.110247407274733
+    },
+    {
+      "type": "data",
+      "name": "D28",
+      "x": 0.45300492470911696,
+      "y": -0.06163266682325083
+    },
+    {
+      "type": "data",
+      "name": "D29",
+      "x": 2.59540185760607,
+      "y": -0.6615337887282435
+    },
+    {
+      "type": "data",
+      "name": "D30",
+      "x": -0.6259249457474164,
+      "y": 2.1673581798060115
+    },
+    {
+      "type": "data",
+      "name": "D31",
+      "x": 1.1363668935142839,
+      "y": -0.7847974922201048
+    },
+    {
+      "type": "data",
+      "name": "D32",
+      "x": 1.081222549336828,
+      "y": 1.3655610707642407
+    },
+    {
+      "type": "data",
+      "name": "D33",
+      "x": 1.2755387711346546,
+      "y": 1.874871021925611
+    },
+    {
+      "type": "data",
+      "name": "D34",
+      "x": 2.385636338584453,
+      "y": 1.0217583140453705
+    },
+    {
+      "type": "data",
+      "name": "D35",
+      "x": 2.154197030482429,
+      "y": 0.9856729719187222
+    },
+    {
+      "type": "data",
+      "name": "D36",
+      "x": -2.3141432658981107,
+      "y": -4.267311997877696
+    },
+    {
+      "type": "data",
+      "name": "D37",
+      "x": -1.424479294623466,
+      "y": 1.8249275706791983
+    },
+    {
+      "type": "data",
+      "name": "D38",
+      "x": 1.31771596429095,
+      "y": 1.0992333198532611
+    },
+    {
+      "type": "data",
+      "name": "D39",
+      "x": 1.2454248914175405,
+      "y": 1.4945998577381658
+    },
+    {
+      "type": "data",
+      "name": "D40",
+      "x": 2.9658034546772947,
+      "y": -0.3352529747870665
+    },
+    {
+      "type": "data",
+      "name": "D41",
+      "x": 0.49478535553650893,
+      "y": -4.667570253077371
+    },
+    {
+      "type": "data",
+      "name": "D42",
+      "x": 2.034579141790226,
+      "y": 1.261830731328334
+    },
+    {
+      "type": "data",
+      "name": "D43",
+      "x": 0.9890160185457992,
+      "y": 1.1366461401852215
+    },
+    {
+      "type": "data",
+      "name": "D44",
+      "x": -2.934815713623939,
+      "y": -2.547033820905093
+    },
+    {
+      "type": "data",
+      "name": "D45",
+      "x": 1.657156524878447,
+      "y": 1.1326207872845486
+    },
+    {
+      "type": "data",
+      "name": "D46",
+      "x": 2.4433287436708513,
+      "y": 0.8957168226133827
+    },
+    {
+      "type": "data",
+      "name": "D47",
+      "x": 0.5167269465537716,
+      "y": 0.7873224454535085
+    },
+    {
+      "type": "data",
+      "name": "D48",
+      "x": 1.051352112624703,
+      "y": 1.2061342596356779
+    },
+    {
+      "type": "data",
+      "name": "D49",
+      "x": -0.5632842734432164,
+      "y": 1.46147325475525
+    },
+    {
+      "type": "data",
+      "name": "D50",
+      "x": 0.40173505579748126,
+      "y": 1.2326612364429246
+    },
+    {
+      "type": "data",
+      "name": "D51",
+      "x": 2.5589400047411193,
+      "y": 0.7759530600706508
+    },
+    {
+      "type": "data",
+      "name": "D52",
+      "x": -1.1571372909538058,
+      "y": 0.1656375839417544
+    },
+    {
+      "type": "data",
+      "name": "D53",
+      "x": 1.396958723618219,
+      "y": 1.6566897364665798
+    },
+    {
+      "type": "data",
+      "name": "D54",
+      "x": 1.7337553973290225,
+      "y": 1.0508783444430807
+    },
+    {
+      "type": "data",
+      "name": "D55",
+      "x": -2.096999869731077,
+      "y": -2.5994229560146613
+    },
+    {
+      "type": "data",
+      "name": "D56",
+      "x": -2.987737490327271,
+      "y": 1.780852679018724
+    },
+    {
+      "type": "data",
+      "name": "D57",
+      "x": -5.38281141260679,
+      "y": -2.256749525230052
+    },
+    {
+      "type": "data",
+      "name": "D58",
+      "x": 1.5942759331039718,
+      "y": 0.6434182947942605
+    },
+    {
+      "type": "data",
+      "name": "D59",
+      "x": 0.03930621137050307,
+      "y": 1.9817678071333802
+    },
+    {
+      "type": "data",
+      "name": "D60",
+      "x": 2.309647576356128,
+      "y": 0.21465732244237096
+    },
+    {
+      "type": "data",
+      "name": "D61",
+      "x": 0.6449430848457862,
+      "y": 0.599755831146463
+    },
+    {
+      "type": "data",
+      "name": "D62",
+      "x": -3.3197097402582876,
+      "y": -2.2204279552800026
+    },
+    {
+      "type": "data",
+      "name": "D63",
+      "x": 3.450730117538229,
+      "y": 0.4954021005971806
+    },
+    {
+      "type": "data",
+      "name": "D64",
+      "x": 0.6674203734196282,
+      "y": 1.4815109139171085
+    },
+    {
+      "type": "data",
+      "name": "D65",
+      "x": 0.8628395425742001,
+      "y": -4.5241196425330745
+    },
+    {
+      "type": "data",
+      "name": "D66",
+      "x": -4.707727457468534,
+      "y": 0.9252373736064411
+    },
+    {
+      "type": "data",
+      "name": "D67",
+      "x": 0.5125215651688898,
+      "y": 1.3360151101527658
+    },
+    {
+      "type": "data",
+      "name": "D68",
+      "x": 1.2032619181348831,
+      "y": 0.19859177695758826
+    },
+    {
+      "type": "data",
+      "name": "D69",
+      "x": 1.739657554489503,
+      "y": 0.4827354763082322
+    },
+    {
+      "type": "data",
+      "name": "D70",
+      "x": -0.7344477124032955,
+      "y": -3.773280067280812
+    },
+    {
+      "type": "data",
+      "name": "D71",
+      "x": 1.6349805483272657,
+      "y": 1.322357594318501
+    },
+    {
+      "type": "data",
+      "name": "D72",
+      "x": 1.5330441237927201,
+      "y": 2.185082882030737
+    },
+    {
+      "type": "data",
+      "name": "D73",
+      "x": -0.6637099525135657,
+      "y": -0.42126761985233213
+    },
+    {
+      "type": "data",
+      "name": "D74",
+      "x": 2.901882522531566,
+      "y": -2.1818555387740264
+    },
+    {
+      "type": "data",
+      "name": "D75",
+      "x": 1.044093528609562,
+      "y": 0.6947452769721679
+    },
+    {
+      "type": "data",
+      "name": "D76",
+      "x": -0.17345423390827713,
+      "y": 1.6868244338489236
+    },
+    {
+      "type": "data",
+      "name": "D77",
+      "x": -4.668238515170811,
+      "y": 1.3628848593600893
+    },
+    {
+      "type": "data",
+      "name": "D78",
+      "x": 2.0401718018428694,
+      "y": 1.2265019491460314
+    },
+    {
+      "type": "data",
+      "name": "D79",
+      "x": 0.26416843702258513,
+      "y": 1.7862949268394226
+    },
+    {
+      "type": "data",
+      "name": "D80",
+      "x": -0.4502175651873065,
+      "y": 1.5774864294058888
+    },
+    {
+      "type": "data",
+      "name": "D81",
+      "x": 3.2922999261389747,
+      "y": 0.2183687997944187
+    },
+    {
+      "type": "data",
+      "name": "D82",
+      "x": 0.22174541561212233,
+      "y": 1.4023214942624829
+    },
+    {
+      "type": "data",
+      "name": "D83",
+      "x": 1.1453206307283659,
+      "y": 1.592114328331811
+    },
+    {
+      "type": "data",
+      "name": "D84",
+      "x": 0.8580963241002877,
+      "y": 1.4008719146732795
+    },
+    {
+      "type": "data",
+      "name": "D85",
+      "x": -0.3264281344792217,
+      "y": -2.6625501726389547
+    },
+    {
+      "type": "data",
+      "name": "D86",
+      "x": -7.149792629714381,
+      "y": 0.8854946619611358
+    },
+    {
+      "type": "data",
+      "name": "D87",
+      "x": -2.731046524132928,
+      "y": -5.423341411032531
+    },
+    {
+      "type": "data",
+      "name": "D88",
+      "x": 1.0152814081215498,
+      "y": 1.9314188373605126
+    },
+    {
+      "type": "data",
+      "name": "D89",
+      "x": -0.27377063401467516,
+      "y": 0.7334921760567018
+    },
+    {
+      "type": "data",
+      "name": "D90",
+      "x": 0.956064061951674,
+      "y": 0.9748227057817643
+    },
+    {
+      "type": "data",
+      "name": "D91",
+      "x": -3.135140045706127,
+      "y": -3.688958687059866
+    },
+    {
+      "type": "data",
+      "name": "D92",
+      "x": -1.0912749279445018,
+      "y": -3.7239030172051364
+    },
+    {
+      "type": "data",
+      "name": "D93",
+      "x": 1.859582417634186,
+      "y": -1.5020582828592746
+    },
+    {
+      "type": "data",
+      "name": "D94",
+      "x": 1.1254160217324716,
+      "y": -0.7358027736768338
+    },
+    {
+      "type": "data",
+      "name": "D95",
+      "x": -1.8025953832374721,
+      "y": 1.009033165781457
+    },
+    {
+      "type": "data",
+      "name": "D96",
+      "x": -4.0612048243493994,
+      "y": -1.6618508269222265
+    },
+    {
+      "type": "data",
+      "name": "D97",
+      "x": 1.95018470287873,
+      "y": 0.37504340446487106
+    },
+    {
+      "type": "data",
+      "name": "D98",
+      "x": -2.8720867442231826,
+      "y": -1.4506359852782054
+    },
+    {
+      "type": "data",
+      "name": "D99",
+      "x": 0.3428518368242638,
+      "y": -0.6856037388357751
+    },
+    {
+      "type": "data",
+      "name": "D100",
+      "x": 1.9651619020347117,
+      "y": -2.0871295663586538
+    },
+    {
+      "type": "data",
+      "name": "D101",
+      "x": -0.8658546073547545,
+      "y": 1.4626517668962613
+    },
+    {
+      "type": "data",
+      "name": "D102",
+      "x": 0.13647896726836992,
+      "y": 1.2895929092129301
+    },
+    {
+      "type": "data",
+      "name": "D103",
+      "x": 1.3223236035117192,
+      "y": 0.8081329872768644
+    },
+    {
+      "type": "data",
+      "name": "D104",
+      "x": -3.602082976049464,
+      "y": 0.6043130640738773
+    },
+    {
+      "type": "data",
+      "name": "D105",
+      "x": -1.7196457978367499,
+      "y": -4.74683314914494
+    },
+    {
+      "type": "data",
+      "name": "D106",
+      "x": -7.6407938554571455,
+      "y": -1.8563696573364077
+    },
+    {
+      "type": "data",
+      "name": "D107",
+      "x": 0.2340338052454731,
+      "y": 0.0687342709821427
+    },
+    {
+      "type": "data",
+      "name": "D108",
+      "x": 1.884994337933724,
+      "y": 1.5769088356319445
+    },
+    {
+      "type": "data",
+      "name": "D109",
+      "x": 3.5663946315967867,
+      "y": 0.7358697679560786
+    },
+    {
+      "type": "data",
+      "name": "D110",
+      "x": -1.7745189538410555,
+      "y": -3.8970193081133204
+    },
+    {
+      "type": "data",
+      "name": "D111",
+      "x": 1.5814488492374583,
+      "y": -1.7088056506722413
+    },
+    {
+      "type": "data",
+      "name": "D112",
+      "x": 0.47201371761861655,
+      "y": 1.191976847853613
+    },
+    {
+      "type": "data",
+      "name": "D113",
+      "x": 1.6287391796457655,
+      "y": 1.866185198361518
+    },
+    {
+      "type": "data",
+      "name": "D114",
+      "x": 1.8169455976336106,
+      "y": 1.0030948624293508
+    },
+    {
+      "type": "data",
+      "name": "D115",
+      "x": -0.8629804166094689,
+      "y": 0.3519956975606222
+    },
+    {
+      "type": "data",
+      "name": "D116",
+      "x": 1.6995750070709368,
+      "y": 1.7027015081631642
+    },
+    {
+      "type": "data",
+      "name": "D117",
+      "x": 2.930484742979838,
+      "y": 1.5926225204530264
+    },
+    {
+      "type": "data",
+      "name": "D118",
+      "x": 0.7648720929551844,
+      "y": 2.087073848518536
+    },
+    {
+      "type": "data",
+      "name": "D119",
+      "x": 2.5489477611029137,
+      "y": 1.0847099621916898
+    },
+    {
+      "type": "data",
+      "name": "D120",
+      "x": -6.496171494709172,
+      "y": 0.5968644055883356
+    },
+    {
+      "type": "data",
+      "name": "D121",
+      "x": 2.8333994621704623,
+      "y": 1.0414329388209898
+    },
+    {
+      "type": "data",
+      "name": "D122",
+      "x": 1.3015837767083311,
+      "y": 1.163505975793837
+    },
+    {
+      "type": "data",
+      "name": "D123",
+      "x": -4.126109226818841,
+      "y": -0.30458935185318675
+    },
+    {
+      "type": "data",
+      "name": "D124",
+      "x": 1.1192084686406636,
+      "y": -0.4510099525085643
+    },
+    {
+      "type": "data",
+      "name": "D125",
+      "x": -1.7511751341946489,
+      "y": 1.2360067699742594
+    },
+    {
+      "type": "data",
+      "name": "D126",
+      "x": 0.22283119445954674,
+      "y": -4.381234647492397
+    },
+    {
+      "type": "data",
+      "name": "D127",
+      "x": -5.589936054534717,
+      "y": 0.7165300333197704
+    },
+    {
+      "type": "data",
+      "name": "D128",
+      "x": -1.1506735194216458,
+      "y": 2.239824941266728
+    },
+    {
+      "type": "data",
+      "name": "D129",
+      "x": -0.11300608560994693,
+      "y": 2.1250688807888363
+    },
+    {
+      "type": "variable",
+      "name": "Population_Density",
+      "x": -0.25137679123667256,
+      "y": -0.3050137787948856
+    },
+    {
+      "type": "variable",
+      "name": "MedianAge",
+      "x": 0.6867234684557978,
+      "y": -0.3017950374085438
+    },
+    {
+      "type": "variable",
+      "name": "PercentofPublicTransportation",
+      "x": -0.2979467232106112,
+      "y": -0.3784207994434737
+    },
+    {
+      "type": "variable",
+      "name": "MedianHouseholdIncome",
+      "x": -0.3999024708439657,
+      "y": -0.23685432967627654
+    },
+    {
+      "type": "variable",
+      "name": "Persons_per_Bedroom",
+      "x": 0.030879063669200697,
+      "y": -0.11703807139345151
+    },
+    {
+      "type": "variable",
+      "name": "LowIncome%",
+      "x": 0.5676309004844573,
+      "y": -0.3870553846776505
+    },
+    {
+      "type": "variable",
+      "name": "Person>=70",
+      "x": 0.05947520266348472,
+      "y": -0.6410481571424264
+    },
+    {
+      "type": "variable",
+      "name": "Population",
+      "x": -0.04183246135902459,
+      "y": -0.6032748627052757
+    },
+    {
+      "type": "variable",
+      "name": "Young",
+      "x": -0.04850156085993641,
+      "y": -0.5933788205047186
+    },
+    {
+      "type": "variable",
+      "name": "Elderly",
+      "x": 0.03478502273906476,
+      "y": -0.6430783669065656
+    }
+  ],
+  "distances": {
+    "D1": [
+      {
+        "variable": "Population_Density",
+        "distance": 0.0
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 0.9855786062060979
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.2398175174526302
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.6711804898315037
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.7832173340995094
+      },
+      {
+        "variable": "Population",
+        "distance": 2.590792606011609
+      },
+      {
+        "variable": "Young",
+        "distance": 2.6200816308321557
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.6212166861161412
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.238087064325128
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.472390352830828
+      }
+    ],
+    "D2": [
+      {
+        "variable": "MedianAge",
+        "distance": 0.0
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.0901263208635146
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.2398175174526302
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.707910480255596
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.5001626678528392
+      },
+      {
+        "variable": "Young",
+        "distance": 2.647172935671369
+      },
+      {
+        "variable": "Population",
+        "distance": 2.65513708072794
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.064382435685951
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.486885440864773
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.873276113426678
+      }
+    ],
+    "D3": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 0.0
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.1116935962205416
+      },
+      {
+        "variable": "Population",
+        "distance": 1.5116121016580522
+      },
+      {
+        "variable": "Young",
+        "distance": 1.620796503085403
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.7832173340995094
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.1626062703552043
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.3621669636151252
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.5001626678528392
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.604961253573819
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.055221050238934
+      }
+    ],
+    "D4": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.0
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.3624828519380932
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.6711804898315037
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.707910480255596
+      },
+      {
+        "variable": "Young",
+        "distance": 2.064861970790824
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.1626062703552043
+      },
+      {
+        "variable": "Population",
+        "distance": 2.453280218441452
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.8646035535567633
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.678048612420249
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.613601961191266
+      }
+    ],
+    "D5": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 0.0
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 0.9855786062060979
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.0901263208635146
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.3624828519380932
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.3621669636151252
+      },
+      {
+        "variable": "Young",
+        "distance": 2.7791146661565005
+      },
+      {
+        "variable": "Population",
+        "distance": 2.9998449451904223
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.2389219572482615
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.859137390334931
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.485746495271814
+      }
+    ],
+    "D6": [
+      {
+        "variable": "LowIncome%",
+        "distance": 0.0
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.859137390334931
+      },
+      {
+        "variable": "Elderly",
+        "distance": 4.967364599196011
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 5.238087064325128
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.486885440864773
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.604961253573819
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.678048612420249
+      },
+      {
+        "variable": "Young",
+        "distance": 6.154733818675492
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 6.42994504194986
+      },
+      {
+        "variable": "Population",
+        "distance": 6.496647370503081
+      }
+    ],
+    "D7": [
+      {
+        "variable": "Person>=70",
+        "distance": 0.0
+      },
+      {
+        "variable": "Population",
+        "distance": 0.9696861724590522
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.1116935962205416
+      },
+      {
+        "variable": "Young",
+        "distance": 1.5417992624447634
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.6212166861161412
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.8646035535567633
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.064382435685951
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.2389219572482615
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.42994504194986
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.68906488971313
+      }
+    ],
+    "D8": [
+      {
+        "variable": "Population",
+        "distance": 0.0
+      },
+      {
+        "variable": "Young",
+        "distance": 0.9336209437559946
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 0.9696861724590522
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.5116121016580522
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.453280218441452
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.590792606011609
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.65513708072794
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.9998449451904223
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.496647370503081
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.98140083701018
+      }
+    ],
+    "D9": [
+      {
+        "variable": "Young",
+        "distance": 0.0
+      },
+      {
+        "variable": "Population",
+        "distance": 0.9336209437559946
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.5417992624447634
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.620796503085403
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.064861970790824
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.6200816308321557
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.647172935671369
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.7791146661565005
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.154733818675492
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.901311043128254
+      }
+    ],
+    "D10": [
+      {
+        "variable": "Elderly",
+        "distance": 0.0
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.967364599196011
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 7.472390352830828
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 7.485746495271814
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 7.873276113426678
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 8.055221050238934
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 8.613601961191266
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 8.68906488971313
+      },
+      {
+        "variable": "Young",
+        "distance": 8.901311043128254
+      },
+      {
+        "variable": "Population",
+        "distance": 8.98140083701018
+      }
+    ],
+    "D11": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.1760775919923563
+      },
+      {
+        "variable": "Young",
+        "distance": 1.7249163626291808
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.8554360128746923
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.130023413652928
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.2975589926464495
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.35463286147404
+      },
+      {
+        "variable": "Population",
+        "distance": 2.4405841426100556
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.9465078421571653
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.2937715086028225
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.442196143532964
+      }
+    ],
+    "D12": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.7699223861560298
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.4213692055475347
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.424821040639249
+      },
+      {
+        "variable": "Young",
+        "distance": 1.5753927978361235
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.6197623051990935
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.865218480955578
+      },
+      {
+        "variable": "Population",
+        "distance": 1.9037214082747422
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.4355235541819638
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.56231160510504
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.468924066535559
+      }
+    ],
+    "D13": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.897371281519613
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.9274559673805793
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.098153989634978
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.6269630764247904
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.6272683312472296
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.805131869285528
+      },
+      {
+        "variable": "Young",
+        "distance": 2.866392898321913
+      },
+      {
+        "variable": "Population",
+        "distance": 3.0197945890955737
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 3.80538722796067
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.633277207482208
+      }
+    ],
+    "D14": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.6936133364166795
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.3582786292360256
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.3947925103124827
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.4853468325683892
+      },
+      {
+        "variable": "Young",
+        "distance": 2.1342135523418375
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.1391299722975092
+      },
+      {
+        "variable": "Population",
+        "distance": 2.328824041419446
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.7573138704353863
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.69442908087909
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.551642375502892
+      }
+    ],
+    "D15": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.361083888093326
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.598646717184531
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.126249729525942
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.2436378369702545
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.2068513449450005
+      },
+      {
+        "variable": "Young",
+        "distance": 3.4107458560637145
+      },
+      {
+        "variable": "Population",
+        "distance": 3.755429619681163
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.051118003672037
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.700400739114652
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.590859999401827
+      }
+    ],
+    "D16": [
+      {
+        "variable": "MedianAge",
+        "distance": 1.4990368955952882
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.5436314881779207
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.5468321542688286
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.684772091191849
+      },
+      {
+        "variable": "Population",
+        "distance": 2.971500795334416
+      },
+      {
+        "variable": "Young",
+        "distance": 3.1351622648736925
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.4465318813763357
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.587701393712853
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.697403814851955
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.834765810188586
+      }
+    ],
+    "D17": [
+      {
+        "variable": "Young",
+        "distance": 0.8183053471816055
+      },
+      {
+        "variable": "Population",
+        "distance": 1.2098568215801178
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.561737784542452
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.6474846786370607
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.7910419459645455
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.8814434660329329
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.9936241508644812
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.1038247891054014
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.8073498521233375
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.435088675589645
+      }
+    ],
+    "D18": [
+      {
+        "variable": "MedianAge",
+        "distance": 5.006048618392048
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 5.129847846827664
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 5.269411609731737
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.6426765544246935
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.757687890508268
+      },
+      {
+        "variable": "Population",
+        "distance": 5.896450776240079
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 6.05848612792514
+      },
+      {
+        "variable": "Young",
+        "distance": 6.098433488948524
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.545331652359084
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.359108895882876
+      }
+    ],
+    "D19": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.0809929564047884
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.1219588395689608
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.226087670713061
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.4903335204421964
+      },
+      {
+        "variable": "Young",
+        "distance": 1.5990847276343656
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.7669092197838177
+      },
+      {
+        "variable": "Population",
+        "distance": 1.8039938037031353
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.945540273963295
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.455424907459389
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.12724736379515
+      }
+    ],
+    "D20": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.8663338969909978
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.4458744407052142
+      },
+      {
+        "variable": "Young",
+        "distance": 1.6159172266541075
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.755929221408498
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.7811369257344702
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.8720677228286555
+      },
+      {
+        "variable": "Population",
+        "distance": 2.122635443100276
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.56388299271466
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.229950793698394
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.284672567681456
+      }
+    ],
+    "D21": [
+      {
+        "variable": "LowIncome%",
+        "distance": 2.9970712694843518
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.2686473005950836
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 3.9943188219611403
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.03753506755998
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.067727317108122
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 4.981048179095333
+      },
+      {
+        "variable": "Young",
+        "distance": 5.219068175566555
+      },
+      {
+        "variable": "Population",
+        "distance": 5.714947872354092
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.939974259285571
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.554501466832358
+      }
+    ],
+    "D22": [
+      {
+        "variable": "LowIncome%",
+        "distance": 3.0167606103532045
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.38688452687528
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 3.4958608665732265
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.705750638051955
+      },
+      {
+        "variable": "Elderly",
+        "distance": 4.3592782533996335
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 4.384437283217608
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 4.534633864864297
+      },
+      {
+        "variable": "Young",
+        "distance": 5.076433045447528
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.1229859569450165
+      },
+      {
+        "variable": "Population",
+        "distance": 5.1917250388402465
+      }
+    ],
+    "D23": [
+      {
+        "variable": "Population_Density",
+        "distance": 4.435266916530343
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.624919894799723
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.902087292949542
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.083047532404672
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.182724428186387
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.278987238567943
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.7457835762575264
+      },
+      {
+        "variable": "Population",
+        "distance": 5.887462266203981
+      },
+      {
+        "variable": "Young",
+        "distance": 6.010817031389726
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.166088917693516
+      }
+    ],
+    "D24": [
+      {
+        "variable": "Elderly",
+        "distance": 3.7006689972839015
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 7.281196560253439
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 8.246186293246915
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 8.629379055892002
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 8.632714263026216
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 8.743775683863136
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 9.00336317200099
+      },
+      {
+        "variable": "Population",
+        "distance": 9.481421621307813
+      },
+      {
+        "variable": "Young",
+        "distance": 9.691580683008823
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 9.724628139356929
+      }
+    ],
+    "D25": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.4999638057554861
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.3077692231327933
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.5071712180757029
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.612659473283293
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.2079272581862495
+      },
+      {
+        "variable": "Young",
+        "distance": 2.3347477677495823
+      },
+      {
+        "variable": "Population",
+        "distance": 2.565735342627934
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.924561065976029
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.700972180700478
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.595570785895355
+      }
+    ],
+    "D26": [
+      {
+        "variable": "Elderly",
+        "distance": 4.8665916812098695
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 7.448105960433546
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 8.82550859964259
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 8.88937111996309
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 9.162090485673271
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 9.323835656189699
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 9.47202528142659
+      },
+      {
+        "variable": "Population",
+        "distance": 9.938818611726417
+      },
+      {
+        "variable": "Young",
+        "distance": 10.010278047837808
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 10.171196382404176
+      }
+    ],
+    "D27": [
+      {
+        "variable": "MedianAge",
+        "distance": 1.1655521198436951
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.6284723169582394
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.9104125916566959
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.911976312777507
+      },
+      {
+        "variable": "Young",
+        "distance": 2.0122727681352544
+      },
+      {
+        "variable": "Population",
+        "distance": 2.037018029295082
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.46003506240023
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.692225582382153
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.240133581097792
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.724117732851113
+      }
+    ],
+    "D28": [
+      {
+        "variable": "MedianAge",
+        "distance": 1.125779949899753
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.2145167693993388
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.508699209726429
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.035284859008137
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.384276606696279
+      },
+      {
+        "variable": "Young",
+        "distance": 2.517134743501846
+      },
+      {
+        "variable": "Population",
+        "distance": 2.722779576472132
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.031910750286457
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.742841393200152
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.140198760753042
+      }
+    ],
+    "D29": [
+      {
+        "variable": "Person>=70",
+        "distance": 1.1903541512511573
+      },
+      {
+        "variable": "Population",
+        "distance": 1.4394431391930471
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.7041415294120288
+      },
+      {
+        "variable": "Young",
+        "distance": 1.907135215495925
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.7697848710708635
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.975613583746004
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 3.3025784345750373
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.3259075459462695
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.187133147295917
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.161861370633348
+      }
+    ],
+    "D30": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.4884814683125025
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.5384871787635384
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.071770248987859
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.4022014125848083
+      },
+      {
+        "variable": "Young",
+        "distance": 3.224765554542851
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.3416399686435914
+      },
+      {
+        "variable": "Population",
+        "distance": 3.701765195241352
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.156437129393594
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.014679393677935
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.273701064031767
+      }
+    ],
+    "D31": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.2907435977363417
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.5165907724371936
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.9573043990958747
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.0448163106369925
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.1262419061049997
+      },
+      {
+        "variable": "Population",
+        "distance": 2.200293988153711
+      },
+      {
+        "variable": "Young",
+        "distance": 2.25113935581223
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.5245472884637445
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.993806193787967
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.055901393237695
+      }
+    ],
+    "D32": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.869893686681205
+      },
+      {
+        "variable": "Young",
+        "distance": 1.2470665042200675
+      },
+      {
+        "variable": "Population",
+        "distance": 1.6710803004683266
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.696777936926031
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.7487659095876447
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.7966123938035228
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.831358561027452
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.202013349274962
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.7372285745058385
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.65288888528686
+      }
+    ],
+    "D33": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.3659439146434775
+      },
+      {
+        "variable": "Young",
+        "distance": 1.551450398627541
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.0300394813501437
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.1015981454319137
+      },
+      {
+        "variable": "Population",
+        "distance": 2.277276490093915
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.406271730627379
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.4200548471651953
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.8710358403602765
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.624470253533427
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.596300696562999
+      }
+    ],
+    "D34": [
+      {
+        "variable": "Young",
+        "distance": 0.2461438213889278
+      },
+      {
+        "variable": "Population",
+        "distance": 0.8837838911731053
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.570288624976728
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.768615890442964
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.2285357209639782
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.6927113589775975
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.7375544648180266
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.9053284750574817
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.273024338416262
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.960587268865371
+      }
+    ],
+    "D35": [
+      {
+        "variable": "Young",
+        "distance": 0.6803770714320712
+      },
+      {
+        "variable": "Population",
+        "distance": 1.345399101388524
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.9642788254747905
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.0010610608337087
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.1079096136946913
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.4313722176691335
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.628505482518318
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.631439362303547
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.917187038000871
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.657556762048973
+      }
+    ],
+    "D36": [
+      {
+        "variable": "Elderly",
+        "distance": 4.031478851474881
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.98677600447756
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 5.178270030284175
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.393318043285099
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 5.414783106915363
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.915339668110039
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 6.373117407032244
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 6.495758293760884
+      },
+      {
+        "variable": "Population",
+        "distance": 6.55867829785277
+      },
+      {
+        "variable": "Young",
+        "distance": 6.722432703305812
+      }
+    ],
+    "D37": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.3309113189747346
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.3717994329869008
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.6096690851346347
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.7514029660908297
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.487207549066208
+      },
+      {
+        "variable": "Young",
+        "distance": 3.533474505072654
+      },
+      {
+        "variable": "Population",
+        "distance": 3.849698167433579
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.183582570747848
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.699532896796254
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.059804153892733
+      }
+    ],
+    "D38": [
+      {
+        "variable": "Young",
+        "distance": 1.0088983349543488
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.283243995569631
+      },
+      {
+        "variable": "Population",
+        "distance": 1.3895794624853148
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.5719576853101187
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.869315295706608
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.9293849067292022
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.9444453255798955
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.9715997341446534
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.6487602833663715
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.56317801272181
+      }
+    ],
+    "D39": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.1089188903030185
+      },
+      {
+        "variable": "Young",
+        "distance": 1.1794799957022568
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.8284060347279556
+      },
+      {
+        "variable": "Population",
+        "distance": 1.88265990009542
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.9268600577729824
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.111625370748214
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.1216045661378233
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.357837695609248
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.584985406802949
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.55457669125509
+      }
+    ],
+    "D40": [
+      {
+        "variable": "Person>=70",
+        "distance": 1.4067290583599343
+      },
+      {
+        "variable": "Young",
+        "distance": 1.5068587350594294
+      },
+      {
+        "variable": "Population",
+        "distance": 1.640832346887909
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.7684824971044812
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 3.2783055933491054
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 3.310477378999068
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.6348392102159255
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.6601456930960397
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.1128822846115245
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.573117802927543
+      }
+    ],
+    "D41": [
+      {
+        "variable": "Elderly",
+        "distance": 4.42240646729736
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.990896514983111
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.122533255356844
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.209579077062375
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 5.288405555108288
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.428712110764242
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.709385825130185
+      },
+      {
+        "variable": "Population",
+        "distance": 5.9195476730608165
+      },
+      {
+        "variable": "Young",
+        "distance": 6.128813021777734
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 6.330640643867816
+      }
+    ],
+    "D42": [
+      {
+        "variable": "Young",
+        "distance": 0.5925590972783268
+      },
+      {
+        "variable": "Population",
+        "distance": 1.4806924960931096
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.6931843179535997
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.9040679504563645
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.9349773577823197
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.6283281892307495
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.650134077580584
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.7258250815371876
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.813111974670877
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.708038851116727
+      }
+    ],
+    "D43": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.9985674270443496
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.3216042274578519
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.4585386484403258
+      },
+      {
+        "variable": "Young",
+        "distance": 1.5059128348191013
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.5543481078981731
+      },
+      {
+        "variable": "Population",
+        "distance": 1.6422025371625073
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.6939603018698344
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.152224133273793
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.861511490183352
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.52671062758731
+      }
+    ],
+    "D44": [
+      {
+        "variable": "LowIncome%",
+        "distance": 4.34297218599919
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.492099325856973
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.735389292725962
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.884071559623969
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 4.996324220654075
+      },
+      {
+        "variable": "Elderly",
+        "distance": 5.274181468069042
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.554643243308224
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.593120733016192
+      },
+      {
+        "variable": "Population",
+        "distance": 5.780212335436483
+      },
+      {
+        "variable": "Young",
+        "distance": 5.889730845414121
+      }
+    ],
+    "D45": [
+      {
+        "variable": "Young",
+        "distance": 0.9171891436220273
+      },
+      {
+        "variable": "Population",
+        "distance": 1.0407598209350988
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.4958632043936388
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.604187328026185
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.73160857597932
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.9028982180194933
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.0106266671468833
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.197864672471939
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.164341392686543
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.834112846810662
+      }
+    ],
+    "D46": [
+      {
+        "variable": "Young",
+        "distance": 0.7739279806455288
+      },
+      {
+        "variable": "Population",
+        "distance": 1.0193956466156193
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.7964776137025518
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.0283658964769034
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.337717012465997
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.467303332059572
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.7133027334201425
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.865825132427212
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.32504459602911
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.88347891204785
+      }
+    ],
+    "D47": [
+      {
+        "variable": "Population_Density",
+        "distance": 0.9155168120744961
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.9839351681446563
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.1141400675453046
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.3810200407807325
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.3970107230308932
+      },
+      {
+        "variable": "Young",
+        "distance": 1.8552794794903507
+      },
+      {
+        "variable": "Population",
+        "distance": 2.015796971026302
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.211083452071781
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.338293530532092
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.9944063433384205
+      }
+    ],
+    "D48": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.9143731327806164
+      },
+      {
+        "variable": "Young",
+        "distance": 1.2286955675769142
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.5716416250795493
+      },
+      {
+        "variable": "Population",
+        "distance": 1.6405051000056077
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.6622391394991067
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.714851704795849
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.733791198245823
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.124259923663182
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.602731886677183
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.488367334568913
+      }
+    ],
+    "D49": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 0.9882582919617141
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.3296776614634231
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.81964962173398
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.88568501518581
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.889247406245605
+      },
+      {
+        "variable": "Young",
+        "distance": 2.9782565051511107
+      },
+      {
+        "variable": "Population",
+        "distance": 3.4473121578087667
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.779967131231744
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.801979655703131
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.812114725452932
+      }
+    ],
+    "D50": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.7546671137185977
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.0428056432297335
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.1240215314308983
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.393041285302921
+      },
+      {
+        "variable": "Young",
+        "distance": 1.9763182011365696
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.0508565692735883
+      },
+      {
+        "variable": "Population",
+        "distance": 2.255931669057583
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.721085444535076
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.337709891304659
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.231629770921765
+      }
+    ],
+    "D51": [
+      {
+        "variable": "Population",
+        "distance": 0.3693402728998262
+      },
+      {
+        "variable": "Young",
+        "distance": 0.9542151791942405
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.2501324262965645
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.717499580607466
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.3437204997160497
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.5566597277878946
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.592615643223656
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.9672248514514066
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.662941458413356
+      },
+      {
+        "variable": "Elderly",
+        "distance": 9.143067394265739
+      }
+    ],
+    "D52": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.646438546699179
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.352942641843117
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.4100345619964383
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.5273493232684414
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.1440804320968736
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 3.435409770409313
+      },
+      {
+        "variable": "Young",
+        "distance": 3.5197393597109143
+      },
+      {
+        "variable": "Population",
+        "distance": 3.95795984655159
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.118120884542753
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.734278432010686
+      }
+    ],
+    "D53": [
+      {
+        "variable": "Young",
+        "distance": 1.0984538646758182
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.2230323466822908
+      },
+      {
+        "variable": "Population",
+        "distance": 1.8514417403739605
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.9053675206264398
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.1648215359294407
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.3255942798779983
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.3397116585602378
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.3552478023984422
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.740752811469836
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.762348832136375
+      }
+    ],
+    "D54": [
+      {
+        "variable": "Young",
+        "distance": 1.3485753880439835
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.8751547019790744
+      },
+      {
+        "variable": "Population",
+        "distance": 2.0113719253582243
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.1166970781230963
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.1973401691683128
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.242269061598413
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.4325895945222196
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.5786096616237644
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.4668181179040385
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.274819094756444
+      }
+    ],
+    "D55": [
+      {
+        "variable": "LowIncome%",
+        "distance": 2.1316499946615113
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.1737330495032
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.187351484787486
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 4.550639088051161
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.712588524728421
+      },
+      {
+        "variable": "Elderly",
+        "distance": 4.950066857443323
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.058799959439535
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.350895190663161
+      },
+      {
+        "variable": "Young",
+        "distance": 5.519323326976176
+      },
+      {
+        "variable": "Population",
+        "distance": 5.609294655240317
+      }
+    ],
+    "D56": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 3.854136441793278
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.8581259943537622
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.008472800814877
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 4.176684198572898
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.352378618612153
+      },
+      {
+        "variable": "Young",
+        "distance": 4.703918100125149
+      },
+      {
+        "variable": "Population",
+        "distance": 4.823154521808921
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.857187060061881
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.891076903942147
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.441434742298176
+      }
+    ],
+    "D57": [
+      {
+        "variable": "LowIncome%",
+        "distance": 5.975739368116663
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 6.046505849624439
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 6.35762500087316
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.565972017105501
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 6.591697860508349
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 6.702124340233049
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 7.041366175207285
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 7.225087839368313
+      },
+      {
+        "variable": "Population",
+        "distance": 7.572068640122695
+      },
+      {
+        "variable": "Young",
+        "distance": 7.73114812728194
+      }
+    ],
+    "D58": [
+      {
+        "variable": "MedianAge",
+        "distance": 1.3672316092749703
+      },
+      {
+        "variable": "Population",
+        "distance": 1.418535227908256
+      },
+      {
+        "variable": "Young",
+        "distance": 1.470925523571072
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.7531664404698648
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.7712461367128174
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.8644127094067977
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.9670824266873015
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.028016962473912
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.01705892267297
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.442571053572578
+      }
+    ],
+    "D59": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.5094104927329198
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.3678031482337618
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.7151963496284781
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.919335292777715
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.3949361988904503
+      },
+      {
+        "variable": "Young",
+        "distance": 2.4795579951483444
+      },
+      {
+        "variable": "Population",
+        "distance": 2.87110875080862
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.18345086043313
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.665780999838812
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.553619553790494
+      }
+    ],
+    "D60": [
+      {
+        "variable": "Population",
+        "distance": 0.8354052698648005
+      },
+      {
+        "variable": "Young",
+        "distance": 1.106140453337981
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.2900886815936894
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.5921655530092371
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.363704381910904
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.4062915312616675
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.524495808747264
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.7750985766232534
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.141897802262975
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.450883359392193
+      }
+    ],
+    "D61": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.4304831822424162
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.5523662074404005
+      },
+      {
+        "variable": "Young",
+        "distance": 1.781764816012613
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.041979576114041
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.04479941718155
+      },
+      {
+        "variable": "Population",
+        "distance": 2.1396527310040065
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.242687392241986
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.514257995061665
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.073970173657577
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.248388331303941
+      }
+    ],
+    "D62": [
+      {
+        "variable": "LowIncome%",
+        "distance": 2.493114185282931
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.767683761691462
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.852737703946239
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.131340841746354
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.35534420012423
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.496285105497373
+      },
+      {
+        "variable": "Elderly",
+        "distance": 5.786972495877581
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.942992516741691
+      },
+      {
+        "variable": "Young",
+        "distance": 6.0557734843182125
+      },
+      {
+        "variable": "Population",
+        "distance": 6.15759715614676
+      }
+    ],
+    "D63": [
+      {
+        "variable": "Population",
+        "distance": 1.0558210232377547
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.5348107210647892
+      },
+      {
+        "variable": "Young",
+        "distance": 1.7996974406976325
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.4166767915169953
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.276947606798795
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 3.3815016183343465
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 3.3836456292136394
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.846853287289056
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 7.218502342206005
+      },
+      {
+        "variable": "Elderly",
+        "distance": 9.440769113616176
+      }
+    ],
+    "D64": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.9213319951550104
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.1134545407909462
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.410405458299125
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.4312053417216148
+      },
+      {
+        "variable": "Young",
+        "distance": 1.8854859466983782
+      },
+      {
+        "variable": "Population",
+        "distance": 2.0255843066984722
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.0434999044373017
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.5335359488807003
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.901721432846705
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.547438429098717
+      }
+    ],
+    "D65": [
+      {
+        "variable": "Elderly",
+        "distance": 4.386651987104662
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.669037803274841
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.781711820487644
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 4.887658173076154
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 5.111418303335142
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.423126231858966
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.427730153014536
+      },
+      {
+        "variable": "Population",
+        "distance": 5.946344266538886
+      },
+      {
+        "variable": "Young",
+        "distance": 5.988201106724182
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 6.096436194825299
+      }
+    ],
+    "D66": [
+      {
+        "variable": "Population_Density",
+        "distance": 4.943807253978161
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 5.0036480254303415
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.259478622052907
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.384657034487243
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.57393039518865
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.956755360539661
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 6.272041599033663
+      },
+      {
+        "variable": "Population",
+        "distance": 6.331834283777332
+      },
+      {
+        "variable": "Young",
+        "distance": 6.402987122093077
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.572749391334279
+      }
+    ],
+    "D67": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.6961857958140667
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.0955956803337517
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.1227133128997755
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.4172095399425721
+      },
+      {
+        "variable": "Young",
+        "distance": 1.924005410600237
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.064289850454045
+      },
+      {
+        "variable": "Population",
+        "distance": 2.2158776816611776
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.701858113362752
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.520169414591943
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.329024651671011
+      }
+    ],
+    "D68": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.2603139710708162
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.2819307858967222
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.4431522196581112
+      },
+      {
+        "variable": "Population",
+        "distance": 1.5441062976212048
+      },
+      {
+        "variable": "Young",
+        "distance": 1.575143725447597
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.666247507950872
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.7600252123784914
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.7881679978594358
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.431398841974451
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.783654285461172
+      }
+    ],
+    "D69": [
+      {
+        "variable": "Population",
+        "distance": 0.887119133651171
+      },
+      {
+        "variable": "Young",
+        "distance": 1.1959784038284518
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.254905459915702
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.3243847415034082
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.7658482644733648
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.848965864394473
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.849623186790385
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.2145658464469924
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.090614329474519
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.514428114643879
+      }
+    ],
+    "D70": [
+      {
+        "variable": "Elderly",
+        "distance": 3.4765929427817897
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 3.6430619450871773
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.231647646326073
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.266546188835664
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.493288307226341
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.079938303655132
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.469608078116108
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.732052879260409
+      },
+      {
+        "variable": "Population",
+        "distance": 5.884713216385819
+      },
+      {
+        "variable": "Young",
+        "distance": 5.888597130006923
+      }
+    ],
+    "D71": [
+      {
+        "variable": "Young",
+        "distance": 0.9091313617176633
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.5529216918271265
+      },
+      {
+        "variable": "Population",
+        "distance": 1.578118034020647
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.953881792853011
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.06028066828389
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.17388533546054
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.233483565662388
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.3016067622922862
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.743810900642248
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.61257223650724
+      }
+    ],
+    "D72": [
+      {
+        "variable": "Young",
+        "distance": 1.6310383358777951
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.8200281646853904
+      },
+      {
+        "variable": "Population",
+        "distance": 2.500980978322537
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.523316224588308
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.5805882226978607
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.7693908127276985
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.9150026740028183
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.0251595233964195
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.482743117332723
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.699113701375557
+      }
+    ],
+    "D73": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.3406402439244176
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.844933001785752
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.8939612538915434
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.4963326251370623
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.97577765951166
+      },
+      {
+        "variable": "Young",
+        "distance": 3.356835643908093
+      },
+      {
+        "variable": "Population",
+        "distance": 3.638046969368031
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.822602066426073
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 3.9165570508014635
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.413013672110884
+      }
+    ],
+    "D74": [
+      {
+        "variable": "Person>=70",
+        "distance": 2.8095991715440345
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.9349439467103555
+      },
+      {
+        "variable": "Population",
+        "distance": 3.2815034681123114
+      },
+      {
+        "variable": "Young",
+        "distance": 3.3755990187242566
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 3.953664336070345
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.33412746565985
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.39902356975408
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 4.654655976841115
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.823765876852831
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.3978440330753035
+      }
+    ],
+    "D75": [
+      {
+        "variable": "MedianAge",
+        "distance": 1.1699593597143012
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.2842940036392287
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.342081244552905
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.4749830364382643
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.5174566603022273
+      },
+      {
+        "variable": "Young",
+        "distance": 1.5343210518370596
+      },
+      {
+        "variable": "Population",
+        "distance": 1.5692448110868908
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.004291089994198
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.602469854777706
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.169477951765975
+      }
+    ],
+    "D76": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.6905296996320691
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 0.9288320090947578
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.4819355419974118
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.5277493048242785
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.5021118467332726
+      },
+      {
+        "variable": "Young",
+        "distance": 2.658312305416571
+      },
+      {
+        "variable": "Population",
+        "distance": 2.982413541764352
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.3198139405805076
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.429953790875249
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.277477635517894
+      }
+    ],
+    "D77": [
+      {
+        "variable": "Population_Density",
+        "distance": 5.190615720261825
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 5.227416878346776
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.297564997604648
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.445068511474318
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.725346714968716
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.730687307708777
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 6.136393935495039
+      },
+      {
+        "variable": "Young",
+        "distance": 6.234229944810224
+      },
+      {
+        "variable": "Population",
+        "distance": 6.248794868797624
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.788646321090294
+      }
+    ],
+    "D78": [
+      {
+        "variable": "Young",
+        "distance": 0.5663463879197654
+      },
+      {
+        "variable": "Population",
+        "distance": 1.4429448558615923
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.7122954904072665
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.902500132892915
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.9614552354844943
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.647742879140091
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.6594696406649287
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.711966100186531
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.7799549745519885
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.708273214616352
+      }
+    ],
+    "D79": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.15540760510880947
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.3469830782163297
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.6662737493457311
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.778561361592518
+      },
+      {
+        "variable": "Young",
+        "distance": 2.1543587661538393
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.175996554841163
+      },
+      {
+        "variable": "Population",
+        "distance": 2.545533908684813
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.918592424872307
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.608309349619775
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.57074123496618
+      }
+    ],
+    "D80": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 0.8319446071409949
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.0415388607068774
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.3228822496117945
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.5661691532411512
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.878545610743023
+      },
+      {
+        "variable": "Young",
+        "distance": 2.9776863469990444
+      },
+      {
+        "variable": "Population",
+        "distance": 3.1932193850733523
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.6195148075837955
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.320220347445593
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.08565733924073
+      }
+    ],
+    "D81": [
+      {
+        "variable": "Population",
+        "distance": 1.005675275227919
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.3291202421550476
+      },
+      {
+        "variable": "Young",
+        "distance": 1.5895368814610833
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.199410061593344
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.3075547121238005
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 3.3327289401734324
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 3.3736104185961233
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.7753146031260623
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.901458154231377
+      },
+      {
+        "variable": "Elderly",
+        "distance": 9.126320026393866
+      }
+    ],
+    "D82": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.4378096819036731
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 0.9640072373209899
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.364952974549714
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.3732332295347898
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.090081424449608
+      },
+      {
+        "variable": "Young",
+        "distance": 2.1489300704729746
+      },
+      {
+        "variable": "Population",
+        "distance": 2.478858246289497
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.8582430628535618
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.358123678532754
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.259984337493272
+      }
+    ],
+    "D83": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.983041416737608
+      },
+      {
+        "variable": "Young",
+        "distance": 1.3187437923902918
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.850924986719691
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.9701231706718827
+      },
+      {
+        "variable": "Population",
+        "distance": 1.9884089691370623
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.015881434045365
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.0799739489173836
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.4955797758629052
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.643329074679604
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.593219999061278
+      }
+    ],
+    "D84": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.6677430913781499
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.4740431435999672
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.4857016554543427
+      },
+      {
+        "variable": "Young",
+        "distance": 1.5385117126893917
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.6196970721164268
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.8708155519048
+      },
+      {
+        "variable": "Population",
+        "distance": 1.913963464236678
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.4252512577089056
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.717620744412538
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.53522218044733
+      }
+    ],
+    "D85": [
+      {
+        "variable": "Population_Density",
+        "distance": 2.878422761926326
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.166582873922709
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.513888177156612
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.621691159048526
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.090786388042351
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 4.312226042345162
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.377549737472137
+      },
+      {
+        "variable": "Population",
+        "distance": 4.69667827751002
+      },
+      {
+        "variable": "Young",
+        "distance": 4.7371360691782884
+      },
+      {
+        "variable": "Elderly",
+        "distance": 4.865923614161471
+      }
+    ],
+    "D86": [
+      {
+        "variable": "Population_Density",
+        "distance": 7.216526103737034
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 7.4759531681044535
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 7.670229477063134
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 7.688449535782304
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 7.823718273552701
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 8.160426465978242
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 8.244423252374913
+      },
+      {
+        "variable": "Population",
+        "distance": 8.479281667719011
+      },
+      {
+        "variable": "Young",
+        "distance": 8.640358167450614
+      },
+      {
+        "variable": "Elderly",
+        "distance": 9.793512478440242
+      }
+    ],
+    "D87": [
+      {
+        "variable": "Elderly",
+        "distance": 3.8609050882348077
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.383960003831529
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 6.313938989206238
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 6.525811722700841
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 6.6260741336861315
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 7.119182743006892
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 7.386874668586047
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 7.519981703416867
+      },
+      {
+        "variable": "Population",
+        "distance": 7.925661399958491
+      },
+      {
+        "variable": "Young",
+        "distance": 7.9308621301495075
+      }
+    ],
+    "D88": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.2813707995619346
+      },
+      {
+        "variable": "Young",
+        "distance": 1.625917696565043
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.060912942538901
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.2472461359028317
+      },
+      {
+        "variable": "Population",
+        "distance": 2.382664449147062
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.4258813509901485
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.4524287994760123
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.846497788377678
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.34226880053192
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.573587854096344
+      }
+    ],
+    "D89": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 0.13516860458266786
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 0.9673405326968534
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.0040447019070626
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.3725919759374026
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.343634545736533
+      },
+      {
+        "variable": "Young",
+        "distance": 2.734297698819793
+      },
+      {
+        "variable": "Population",
+        "distance": 2.946795682319655
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.200997866100177
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.888234851709165
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.486467834001747
+      }
+    ],
+    "D90": [
+      {
+        "variable": "MedianAge",
+        "distance": 1.0562516648564801
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.1867948000979605
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.3645755761728426
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.4529490903594373
+      },
+      {
+        "variable": "Young",
+        "distance": 1.6539137123320753
+      },
+      {
+        "variable": "Population",
+        "distance": 1.7219819241465557
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.7867829473567596
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.234978497530983
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.777241016510456
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.36609092484299
+      }
+    ],
+    "D91": [
+      {
+        "variable": "Elderly",
+        "distance": 3.9349756369007984
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.388039546431909
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 5.094891717657679
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 5.352434395165502
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.63452756541997
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.788108979210812
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 6.4171561201372995
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 6.440238378463614
+      },
+      {
+        "variable": "Population",
+        "distance": 6.777078927389802
+      },
+      {
+        "variable": "Young",
+        "distance": 6.900881582162582
+      }
+    ],
+    "D92": [
+      {
+        "variable": "LowIncome%",
+        "distance": 2.6035172501940536
+      },
+      {
+        "variable": "Elderly",
+        "distance": 3.5280150539109676
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.259401669513336
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.495962278949216
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.849755149164923
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.285570190367849
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.37864720326986
+      },
+      {
+        "variable": "Young",
+        "distance": 6.021546092951609
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 6.137660006038963
+      },
+      {
+        "variable": "Population",
+        "distance": 6.273582635045132
+      }
+    ],
+    "D93": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.6352794599683511
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.8684226723396231
+      },
+      {
+        "variable": "Population",
+        "distance": 2.480964710059573
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.52122249533724
+      },
+      {
+        "variable": "Young",
+        "distance": 2.71241496336898
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.162949978765647
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.1722901231701086
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 3.4867815358021645
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.483390592467614
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.261796973865102
+      }
+    ],
+    "D94": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.3370002615917618
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.7627109559579477
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.040043661438491
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.104105804032672
+      },
+      {
+        "variable": "Young",
+        "distance": 2.137178594919168
+      },
+      {
+        "variable": "Population",
+        "distance": 2.2327005219335585
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.2853068691162033
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.5197864778720303
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.725557196658087
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.033018063248454
+      }
+    ],
+    "D95": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.0589515307253827
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.5178201602811074
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.5691446612586164
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.075500075154483
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.4076929271266665
+      },
+      {
+        "variable": "Young",
+        "distance": 4.065101511432933
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.212922719838726
+      },
+      {
+        "variable": "Population",
+        "distance": 4.405142273917922
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.456836841531136
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.391939383477416
+      }
+    ],
+    "D96": [
+      {
+        "variable": "Population_Density",
+        "distance": 4.551567659761868
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.847322354684499
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.110569022565696
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.199134129962755
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.323587861416833
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.646246570019719
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.99487837378244
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.209952219888953
+      },
+      {
+        "variable": "Population",
+        "distance": 6.248025958998132
+      },
+      {
+        "variable": "Young",
+        "distance": 6.429032811561452
+      }
+    ],
+    "D97": [
+      {
+        "variable": "Population",
+        "distance": 1.1137270787732332
+      },
+      {
+        "variable": "Young",
+        "distance": 1.2979151602736505
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.707422071194093
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.7406326349305734
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.7845723886027063
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.0493335399773023
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.158418751736973
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.3326766952659295
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.024909633865212
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.388739221336754
+      }
+    ],
+    "D98": [
+      {
+        "variable": "Population_Density",
+        "distance": 3.6558464446106322
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.9225480612611157
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.09806715775571
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 4.3598771819280016
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.45193408176028
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 4.733114347317407
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.000316186619288
+      },
+      {
+        "variable": "Population",
+        "distance": 5.182062565557665
+      },
+      {
+        "variable": "Young",
+        "distance": 5.344198762020239
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.070471719230218
+      }
+    ],
+    "D99": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.5746330257621834
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.7941927728018736
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.904337204554961
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.4381139564414287
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.548333895561037
+      },
+      {
+        "variable": "Young",
+        "distance": 2.786918351465664
+      },
+      {
+        "variable": "Population",
+        "distance": 3.063052969595283
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.272885940535975
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.094602583144919
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.6408117160927
+      }
+    ],
+    "D100": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.6347942895705367
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.94291024494787
+      },
+      {
+        "variable": "Young",
+        "distance": 3.233190972432828
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 3.2797453604677838
+      },
+      {
+        "variable": "Population",
+        "distance": 3.3263779111820218
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.5948900097541117
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.7220402008804228
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 4.051371444574456
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.909904447297392
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.647995397894599
+      }
+    ],
+    "D101": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.2893708163795328
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.7868296492436868
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.861646075693722
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.1985506341515966
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.188747287148768
+      },
+      {
+        "variable": "Young",
+        "distance": 3.2373399929281947
+      },
+      {
+        "variable": "Population",
+        "distance": 3.6114247567937974
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.020428210000836
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.573538950487794
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.802141293526785
+      }
+    ],
+    "D102": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.0475549864792146
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.2967562254750518
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.5340154991152433
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.5905827247454951
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.9607915244996332
+      },
+      {
+        "variable": "Young",
+        "distance": 2.1419236572531153
+      },
+      {
+        "variable": "Population",
+        "distance": 2.25075711616738
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.3381889369548032
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.69103032033147
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.398315186333582
+      }
+    ],
+    "D103": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.1497271672057794
+      },
+      {
+        "variable": "Population",
+        "distance": 1.2397828736408365
+      },
+      {
+        "variable": "Young",
+        "distance": 1.3150848408862952
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.3772805551942884
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.5600314904798942
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.5884938220747422
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.8681505882409208
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.9702641301210155
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.998128917911102
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.616174273114455
+      }
+    ],
+    "D104": [
+      {
+        "variable": "MedianAge",
+        "distance": 3.98695234930398
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.030299804991065
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.036528670014618
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 4.519958691867416
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 4.925650640792606
+      },
+      {
+        "variable": "Population",
+        "distance": 5.313986197356762
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.4011367665528
+      },
+      {
+        "variable": "Young",
+        "distance": 5.425835025774264
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.469846748230094
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.797362182060194
+      }
+    ],
+    "D105": [
+      {
+        "variable": "LowIncome%",
+        "distance": 3.8138895013208534
+      },
+      {
+        "variable": "Elderly",
+        "distance": 3.860100841354313
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 5.3098131881813515
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 5.5379126161473975
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.642535999501856
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 6.099127642456993
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 6.403995280387243
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 6.5454805124950335
+      },
+      {
+        "variable": "Population",
+        "distance": 6.917895447012193
+      },
+      {
+        "variable": "Young",
+        "distance": 6.931005549867998
+      }
+    ],
+    "D106": [
+      {
+        "variable": "Population_Density",
+        "distance": 7.780184374750086
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 8.217971922417265
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 8.336064308576132
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 8.394455079837373
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.764233291177183
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 8.770079182250516
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 8.827454630032292
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 8.87060239344522
+      },
+      {
+        "variable": "Population",
+        "distance": 9.135440950151464
+      },
+      {
+        "variable": "Young",
+        "distance": 9.467213387186227
+      }
+    ],
+    "D107": [
+      {
+        "variable": "Population_Density",
+        "distance": 0.8635206235705022
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 0.9145200059254766
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.4517311705874798
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.7235893833269855
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.788812352941313
+      },
+      {
+        "variable": "Young",
+        "distance": 2.4520679085207147
+      },
+      {
+        "variable": "Population",
+        "distance": 2.652562239975176
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.7014161318297965
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.707804310719096
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.112510353901647
+      }
+    ],
+    "D108": [
+      {
+        "variable": "Young",
+        "distance": 1.0791673904973549
+      },
+      {
+        "variable": "Population",
+        "distance": 1.8769240205639042
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.8913089069329088
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.2721219852052323
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.450661613823625
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.4959445480534375
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.515409303123412
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.712533245170839
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.687367957849739
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.666471270679882
+      }
+    ],
+    "D109": [
+      {
+        "variable": "Population",
+        "distance": 1.2551770641998474
+      },
+      {
+        "variable": "Young",
+        "distance": 1.4956431216276993
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.7159488990426006
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.5312525734032247
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 3.4679613690871633
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.6736229829077227
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 3.73854459757743
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.070483366902029
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 7.115756488140809
+      },
+      {
+        "variable": "Elderly",
+        "distance": 9.53114497564882
+      }
+    ],
+    "D110": [
+      {
+        "variable": "LowIncome%",
+        "distance": 1.0721951306337223
+      },
+      {
+        "variable": "Elderly",
+        "distance": 4.755803357173413
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.907581462610739
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 5.352967350829786
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.594412715162781
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.769022972506394
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.798583273513554
+      },
+      {
+        "variable": "Young",
+        "distance": 6.318741729985619
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 6.661638380800092
+      },
+      {
+        "variable": "Population",
+        "distance": 6.705767684520255
+      }
+    ],
+    "D111": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.9223004661768408
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.3034626227392785
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.5759102580935185
+      },
+      {
+        "variable": "Population",
+        "distance": 2.8219607086052965
+      },
+      {
+        "variable": "Young",
+        "distance": 2.9267133133444565
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.1130194368689095
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.204479027408554
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 3.578806784326903
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.076947767436353
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.8187211841983855
+      }
+    ],
+    "D112": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.701217506971046
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.1541694810033643
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.1944568144817527
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.2601362599076327
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.7647879073024808
+      },
+      {
+        "variable": "Young",
+        "distance": 1.9108168315071108
+      },
+      {
+        "variable": "Population",
+        "distance": 2.0740299922209124
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.4508851342269464
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.569837473307024
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.33994247286376
+      }
+    ],
+    "D113": [
+      {
+        "variable": "Young",
+        "distance": 1.2702543774714263
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.7377023929116104
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.0946298569039667
+      },
+      {
+        "variable": "Population",
+        "distance": 2.1268803449818394
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.5220544816768657
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.5417594452677954
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.7356929407569135
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.8063381053444583
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.497404471622567
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.680895638308954
+      }
+    ],
+    "D114": [
+      {
+        "variable": "Young",
+        "distance": 0.7700791880941228
+      },
+      {
+        "variable": "Population",
+        "distance": 0.8508896889298945
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.527219467814917
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.5833920006492601
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.6554263610881392
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.050208441745996
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.1218992901572777
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.3261922405693563
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.145265076750595
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.836590624544483
+      }
+    ],
+    "D115": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 0.7364741953431224
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.259272079434993
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.5806950739460621
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.0165588167191175
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.794174403973398
+      },
+      {
+        "variable": "Young",
+        "distance": 3.4213755968481436
+      },
+      {
+        "variable": "Population",
+        "distance": 3.6138325130951197
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.7341484036739816
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.578811430985638
+      },
+      {
+        "variable": "Elderly",
+        "distance": 6.964909595093267
+      }
+    ],
+    "D116": [
+      {
+        "variable": "Young",
+        "distance": 0.9281833756696525
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.5597788678519837
+      },
+      {
+        "variable": "Population",
+        "distance": 1.7536188822510275
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.8579860000383683
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.208426610544192
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.4922741250438274
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.5677807120082803
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.6646653070121236
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.844089091468722
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.872034168213869
+      }
+    ],
+    "D117": [
+      {
+        "variable": "Population",
+        "distance": 1.6398472832606816
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.074778369914359
+      },
+      {
+        "variable": "Young",
+        "distance": 2.314671848779306
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.355038470157365
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.4514558913851165
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.572048022025922
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.8094696985792966
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.115218688246634
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 7.20019890668957
+      },
+      {
+        "variable": "Elderly",
+        "distance": 9.25751773141207
+      }
+    ],
+    "D118": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.0434013130917028
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.8831102664796362
+      },
+      {
+        "variable": "Young",
+        "distance": 1.8955998851400295
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.2795496968634654
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.3531539588211383
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.447787427163939
+      },
+      {
+        "variable": "Population",
+        "distance": 2.6187185377040607
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.0870988040100613
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.4766407714229315
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.602565041939233
+      }
+    ],
+    "D119": [
+      {
+        "variable": "Young",
+        "distance": 0.6553285907057547
+      },
+      {
+        "variable": "Population",
+        "distance": 1.3163522854777137
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.957327685498572
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.118828980127536
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.4561317680259824
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.847082936781964
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.9965939541542004
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.0594247542636133
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.172453105296333
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.896484892543983
+      }
+    ],
+    "D120": [
+      {
+        "variable": "Population_Density",
+        "distance": 6.644221216220788
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 6.774706493574853
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 7.0511716159552975
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 7.142794363514615
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 7.218067695922733
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 7.370242610402713
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 7.860177882243171
+      },
+      {
+        "variable": "Population",
+        "distance": 7.993650505246726
+      },
+      {
+        "variable": "Young",
+        "distance": 8.058539374097396
+      },
+      {
+        "variable": "Elderly",
+        "distance": 9.10081368536053
+      }
+    ],
+    "D121": [
+      {
+        "variable": "Young",
+        "distance": 0.645882970175471
+      },
+      {
+        "variable": "Population",
+        "distance": 0.9930207587653299
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.6544375279748051
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.0740226241740833
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.664844576686716
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.1265593816137733
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 3.1847491959196694
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 3.371180547250012
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.530482984598846
+      },
+      {
+        "variable": "Elderly",
+        "distance": 9.227081983484714
+      }
+    ],
+    "D122": [
+      {
+        "variable": "Young",
+        "distance": 1.156055867814517
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 1.1617619421247238
+      },
+      {
+        "variable": "Population",
+        "distance": 1.3275863207654988
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.5484671495026323
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 1.7020217412579435
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.7392266489152246
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 1.8889489250431495
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.8905699108480785
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.985309456816176
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.696615367357207
+      }
+    ],
+    "D123": [
+      {
+        "variable": "Population_Density",
+        "distance": 4.568353347132033
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.646985738562351
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.841672526348796
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 4.964572432490667
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.129224352836908
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 5.134735201639484
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.808115811011148
+      },
+      {
+        "variable": "Population",
+        "distance": 5.895993642440233
+      },
+      {
+        "variable": "Young",
+        "distance": 5.970523103826636
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.347793642007508
+      }
+    ],
+    "D124": [
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 1.8236784833463502
+      },
+      {
+        "variable": "Young",
+        "distance": 2.072969332725109
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.2585842717202005
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.261265446374734
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.382448853423926
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 2.6276733421580265
+      },
+      {
+        "variable": "Population",
+        "distance": 2.6298314947931085
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.7969100443197386
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.366974933772712
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.463842596081101
+      }
+    ],
+    "D125": [
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.375426274603769
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.902193523745109
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.121911031610516
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 3.220389305821968
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 3.4669742180671386
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.9220834111832867
+      },
+      {
+        "variable": "Young",
+        "distance": 3.9963835885280057
+      },
+      {
+        "variable": "Population",
+        "distance": 4.532602875622721
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.8257490099414415
+      },
+      {
+        "variable": "Elderly",
+        "distance": 7.1485090003450145
+      }
+    ],
+    "D126": [
+      {
+        "variable": "Elderly",
+        "distance": 4.2047927381670815
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 4.506354666915067
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.741330504577356
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 4.839067755872927
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 4.909484302587838
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 5.095712461491931
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 5.346791197661062
+      },
+      {
+        "variable": "Population",
+        "distance": 5.8257667841620195
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 5.982261204050259
+      },
+      {
+        "variable": "Young",
+        "distance": 5.986449157784199
+      }
+    ],
+    "D127": [
+      {
+        "variable": "Population_Density",
+        "distance": 5.857836684943031
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 5.9202847003803
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 6.163381252293713
+      },
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 6.16618283154003
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 6.283204843965743
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 6.456998859228897
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 7.02752822750953
+      },
+      {
+        "variable": "Population",
+        "distance": 7.20258712996988
+      },
+      {
+        "variable": "Young",
+        "distance": 7.215604697978796
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.701540944412269
+      }
+    ],
+    "D128": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 2.0817204374433445
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 2.2770084027420907
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 2.8369138759843824
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 3.1515531480513905
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 3.167759825411122
+      },
+      {
+        "variable": "Young",
+        "distance": 3.427943119342548
+      },
+      {
+        "variable": "Population",
+        "distance": 3.909694394870581
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 4.1009903172668505
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 4.629938363752818
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.260263822490948
+      }
+    ],
+    "D129": [
+      {
+        "variable": "MedianHouseholdIncome",
+        "distance": 0.737542898584185
+      },
+      {
+        "variable": "Persons_per_Bedroom",
+        "distance": 1.6235736634871663
+      },
+      {
+        "variable": "Population_Density",
+        "distance": 1.9621008920554062
+      },
+      {
+        "variable": "MedianAge",
+        "distance": 2.237694378397761
+      },
+      {
+        "variable": "PercentofPublicTransportation",
+        "distance": 2.4706981205359755
+      },
+      {
+        "variable": "Young",
+        "distance": 2.5922816683933356
+      },
+      {
+        "variable": "Population",
+        "distance": 2.996510839721394
+      },
+      {
+        "variable": "Person>=70",
+        "distance": 3.280684963974292
+      },
+      {
+        "variable": "LowIncome%",
+        "distance": 5.57711880912652
+      },
+      {
+        "variable": "Elderly",
+        "distance": 8.660957522178638
+      }
+    ]
+  },
+  "contours": []
+}

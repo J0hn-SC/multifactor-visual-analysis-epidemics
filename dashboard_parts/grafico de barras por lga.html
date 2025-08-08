@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráfico por LGA</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 40px; }
+    #chart-container {
+      height: 300px; /* Altura visible */
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+    svg {
+      width: 100%;
+    }
+    .bar { fill: steelblue; }
+    .stats { margin-top: 20px; }
+    .axis-label { font-weight: bold; }
+  </style>
+</head>
+<body>
+
+<h2>Gráfico de Variable por LGA</h2>
+<label for="varSelect">Selecciona variable:</label>
+<select id="varSelect"></select>
+
+<div id="chart-container">
+  <svg></svg>
+</div>
+
+<div class="stats" id="statsBox">
+  <p><strong>Estadísticas:</strong></p>
+  <p>Mínimo: <span id="min"></span> | Máximo: <span id="max"></span> | Media: <span id="mean"></span> | Mediana: <span id="median"></span></p>
+</div>
+
+<script>
+const svg = d3.select("svg");
+const margin = {top: 30, right: 40, bottom: 30, left: 180};
+const visibleHeight = 300; // visible area
+const barHeight = 25;
+const spacing = 5;
+
+d3.csv("census1/lga_data_clean.csv").then(data => {
+  const variables = data.columns.slice(1);
+  const select = d3.select("#varSelect");
+  variables.forEach(v => select.append("option").text(v).attr("value", v));
+
+  select.property("value", "MedianAge"); // default
+
+  const x = d3.scaleLinear().range([0, 800]);
+  const y = d3.scaleBand().padding(0.1);
+
+  function update(variable) {
+    const parsedData = data.map(d => ({
+      name: d.LGA_Name,
+      value: +d[variable]
+    })).filter(d => !isNaN(d.value));
+
+    parsedData.sort((a, b) => d3.descending(a.value, b.value));
+
+    const totalHeight = (barHeight + spacing) * parsedData.length + margin.top + margin.bottom;
+    svg.attr("height", totalHeight);
+    y.range([margin.top, totalHeight - margin.bottom])
+     .domain(parsedData.map(d => d.name));
+
+    x.domain([0, d3.max(parsedData, d => d.value)]);
+
+    const chart = svg.selectAll("g.chart").data([null]);
+    const chartEnter = chart.enter().append("g").attr("class", "chart").attr("transform", `translate(${margin.left},0)`);
+
+    const bars = chartEnter.merge(chart).selectAll(".bar")
+      .data(parsedData, d => d.name);
+
+    bars.join("rect")
+      .attr("class", "bar")
+      .attr("x", 0)
+      .attr("y", d => y(d.name))
+      .attr("height", barHeight)
+      .attr("width", d => x(d.value));
+
+    const yAxis = d3.axisLeft(y);
+    chartEnter.merge(chart).selectAll(".y-axis").data([null]).join(
+      enter => enter.append("g").attr("class", "y-axis").call(yAxis),
+      update => update.call(yAxis)
+    );
+
+    const xAxis = d3.axisTop(x).ticks(6);
+    chartEnter.merge(chart).selectAll(".x-axis").data([null]).join(
+      enter => enter.append("g").attr("class", "x-axis").attr("transform", `translate(0, ${margin.top})`).call(xAxis),
+      update => update.call(xAxis)
+    );
+
+    // Estadísticas
+    const values = parsedData.map(d => d.value).sort(d3.ascending);
+    d3.select("#min").text(d3.min(values).toFixed(2));
+    d3.select("#max").text(d3.max(values).toFixed(2));
+    d3.select("#mean").text(d3.mean(values).toFixed(2));
+    d3.select("#median").text(d3.median(values).toFixed(2));
+  }
+
+  select.on("change", () => update(select.property("value")));
+  update(select.property("value"));
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-19 Cases in NSW</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #chart-container { width: 800px; margin: auto; }
+        #lga-select { margin-bottom: 20px; }
+        #summary { margin-top: 20px; }
+        .dialog {
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="chart-container">
+        <select id="lga-select"></select>
+        <canvas id="cases-chart"></canvas>
+        <div id="summary"></div>
+        <div id="weekly-dialog" class="dialog"></div>
+    </div>
+
+    <script>
+        // Load data
+        Promise.all([
+            d3.csv('data5/quarterly_cases.csv'),
+            d3.csv('data5/weekly_cases.csv'),
+            d3.csv('data5/summary_stats.csv')
+        ]).then(([quarterlyData, weeklyData, summaryStats]) => {
+            // Parse data
+            quarterlyData.forEach(d => {
+                d.quarter = d.quarter.toString();
+                d.cases = +d.cases;
+                d.min_cases = +d.min_cases;
+                d.max_cases = +d.max_cases;
+                d.mean_cases = +d.mean_cases;
+                d.median_cases = +d.median_cases;
+            });
+            weeklyData.forEach(d => {
+                d.cases = +d.cases;
+            });
+            summaryStats.forEach(d => {
+                d.min_cases = +d.min_cases;
+                d.max_cases = +d.max_cases;
+                d.mean_cases = +d.mean_cases;
+                d.median_cases = +d.median_cases;
+            });
+
+            // Populate LGA select dropdown
+            const lgas = [...new Set(quarterlyData.map(d => d.lga_name19))].sort();
+            const select = d3.select('#lga-select');
+            select.selectAll('option')
+                .data(lgas)
+                .enter()
+                .append('option')
+                .text(d => d)
+                .attr('value', d => d);
+
+            // Initialize chart
+            const ctx = document.getElementById('cases-chart').getContext('2d');
+            let chart;
+
+            function updateChart(selectedLGA) {
+                // Filter data for selected LGA
+                const lgaData = quarterlyData.filter(d => d.lga_name19 === selectedLGA);
+                const summary = summaryStats.find(d => d.lga_name19 === selectedLGA);
+
+                // Update summary
+                d3.select('#summary').html(`
+                    <strong>Summary for ${selectedLGA}</strong><br>
+                    Min Cases: ${summary.min_cases}<br>
+                    Max Cases: ${summary.max_cases}<br>
+                    Mean Cases: ${summary.mean_cases.toFixed(2)}<br>
+                    Median Cases: ${summary.median_cases}
+                `);
+
+                // Destroy previous chart if exists
+                if (chart) chart.destroy();
+
+                // Create new chart
+                chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: lgaData.map(d => d.quarter),
+                        datasets: [{
+                            label: 'Cases',
+                            data: lgaData.map(d => d.cases),
+                            borderColor: '#1f77b4',
+                            backgroundColor: 'rgba(31, 119, 180, 0.2)',
+                            fill: true,
+                            tension: 0.1
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `COVID-19 Cases in ${selectedLGA}`
+                            },
+                            subtitle: {
+                                display: true,
+                                text: 'Date Range: 2020-01-25 to 2022-02-07'
+                            },
+                            tooltip: {
+                                enabled: false,
+                                external: function(context) {
+                                    const tooltipEl = document.getElementById('weekly-dialog');
+                                    if (!context.tooltip.opacity) {
+                                        tooltipEl.style.display = 'none';
+                                        return;
+                                    }
+
+                                    const quarter = context.tooltip.dataPoints[0].label;
+                                    const weeklyLgaData = weeklyData.filter(d => d.lga_name19 === selectedLGA && d.quarter.toString() === quarter);
+                                    const quarterData = lgaData.find(d => d.quarter === quarter);
+
+                                    // Calculate weekly stats
+                                    const weeklyStats = {
+                                        min: weeklyLgaData.length ? Math.min(...weeklyLgaData.map(d => d.cases)) : 0,
+                                        max: weeklyLgaData.length ? Math.max(...weeklyLgaData.map(d => d.cases)) : 0,
+                                        mean: weeklyLgaData.length ? d3.mean(weeklyLgaData, d => d.cases).toFixed(2) : 0,
+                                        median: weeklyLgaData.length ? d3.median(weeklyLgaData, d => d.cases) : 0
+                                    };
+
+                                    // Create weekly chart and stats in tooltip
+                                    tooltipEl.innerHTML = `
+                                        <strong>Weekly Cases in ${selectedLGA} (${quarter})</strong><br>
+                                        <canvas id="weekly-chart" height="150"></canvas>
+                                        <strong>Quarterly Stats</strong><br>
+                                        Cases: ${quarterData.cases}<br>
+                                        Min: ${quarterData.min_cases}<br>
+                                        Max: ${quarterData.max_cases}<br>
+                                        Mean: ${quarterData.mean_cases.toFixed(2)}<br>
+                                        Median: ${quarterData.median_cases}<br>
+                                        <strong>Weekly Stats</strong><br>
+                                        Min: ${weeklyStats.min}<br>
+                                        Max: ${weeklyStats.max}<br>
+                                        Mean: ${weeklyStats.mean}<br>
+                                        Median: ${weeklyStats.median}
+                                    `;
+                                    tooltipEl.style.display = 'block';
+                                    tooltipEl.style.left = context.tooltip.x + 'px';
+                                    tooltipEl.style.top = context.tooltip.y + 'px';
+
+                                    // Draw weekly chart
+                                    const weeklyCtx = document.getElementById('weekly-chart').getContext('2d');
+                                    new Chart(weeklyCtx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: weeklyLgaData.map(d => d.week),
+                                            datasets: [{
+                                                label: 'Weekly Cases',
+                                                data: weeklyLgaData.map(d => d.cases),
+                                                borderColor: '#ff7f0e',
+                                                backgroundColor: 'rgba(255, 127, 14, 0.2)',
+                                                fill: true
+                                            }]
+                                        },
+                                        options: {
+                                            plugins: { title: { display: true, text: `Weekly Cases (${quarter})` } },
+                                            scales: { x: { title: { display: true, text: 'Week' } }, y: { title: { display: true, text: 'Cases' } } }
+                                        }
+                                    });
+                                }
+                            }
+                        },
+                        onClick: (event, elements) => {
+                            if (elements.length) {
+                                const tooltipEl = document.getElementById('weekly-dialog');
+                                tooltipEl.style.display = 'block'; // Make dialog persistent
+                            }
+                        },
+                        scales: {
+                            x: { title: { display: true, text: 'Quarter' } },
+                            y: { title: { display: true, text: 'Cases' } }
+                        }
+                    }
+                });
+            }
+
+            // Update chart when LGA changes
+            select.on('change', function() {
+                updateChart(this.value);
+            });
+
+            // Initialize with first LGA
+            updateChart(lgas[0]);
+        });
+    </script>
+</body>
+</html>
